@@ -643,3 +643,40 @@ section {
     );
 }
 
+/* NAVIGATION LINKS */
+.main-nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;           /* Kalın ve güçlü */
+    font-family: 'Arial', sans-serif;  /* Daha modern görünüm */
+    font-size: 1.1rem;
+    letter-spacing: 1px;        /* Harf aralığını artır */
+    text-transform: uppercase;   /* Büyük harf */
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;  /* Smooth hover */
+    position: relative;
+}
+
+/* Hover efekti: alt çizgi animasyonu ve renk değişimi */
+.main-nav a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a:hover {
+    color: var(--accent);
+    transform: translateY(-2px); /* Hafif yukarı hareket */
+}
