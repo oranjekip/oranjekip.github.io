@@ -343,3 +343,230 @@ body {
   .main-nav ul { flex-direction: column; gap: 0.25rem; }
 }
 
+/* Tüm ana bölümleri hizalamak için */
+.container {
+  max-width: 1200px;      /* Sayfa genişliği sınırı */
+  margin: 0 auto;          /* Ortala */
+  padding: 0 20px;         /* Sol ve sağ boşluk */
+  box-sizing: border-box;  /* Padding toplam genişliği etkilemez */
+}
+
+/* Bölümlerin dikey boşlukları */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Menü, full menu, about, follow bölümleri için özel hizalama */
+.menu-section, 
+.fullmenu-section, 
+.about-section, 
+.follow-section,
+.locations-section,
+.testimonials-section {
+  text-align: center;      /* İçerikleri ortala */
+}
+
+/* VOLLEDIGE MENU - Kart standardizasyonu */
+.fullmenu-section .menu-content img {
+  border-radius: 16px;       /* Smooth kenarlar */
+}
+
+/* WAAR WE ZIJN - Lokasyon kartları */
+.locations-section .location-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;       /* Aynı smooth köşe */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* TESTIMONIALS - Kartlar */
+.testimonials-section .testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;       /* Smooth kenarlar */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ABOUT bölümünün kartı */
+.about-section .about-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;       /* Smooth kenarlar */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ============================
+   GLOBAL CARD + SECTION STYLE
+   ============================ */
+
+/* Tüm kartlarda tek standard: smooth + shadow + dengeli padding */
+.card,
+.menu-item,
+.location-card,
+.testimonial-card,
+.about-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: var(--radius);     /* root: 10px */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover standardı */
+.card:hover,
+.menu-item:hover,
+.location-card:hover,
+.testimonial-card:hover,
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Section spacing: daha profesyonel dikey boşluk */
+section {
+  padding: 80px 0;   /* Uniform spacing */
+  text-align: center;
+}
+
+/* Özellikle bitişik duran alanlar için ekstra düzenleme */
+.about-section,
+.follow-section,
+.fullmenu-section,
+.locations-section,
+.testimonials-section {
+  margin-bottom: 60px;
+}
+
+/* ============================
+   ABOUT SECTION
+   ============================ */
+
+.about-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================
+   FULL MENU IMAGE
+   ============================ */
+
+.fullmenu-section .menu-content img {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ============================
+   LOCATION CARDS
+   ============================ */
+
+.locations-section .location-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: var(--radius);
+}
+
+/* ============================
+   TESTIMONIALS CARDS
+   ============================ */
+
+.testimonials-section .testimonial-card {
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+/* ============================
+   MENU GRID -> Kart uyumu
+   ============================ */
+
+.menu-item {
+  border: 1px solid #f0f0f0;
+}
+
+.menu-item img {
+  border-radius: var(--radius);
+}
+
+/* ============================
+   UNIVERSAL LAYOUT UNIFIER
+   ============================ */
+
+.card img,
+.location-card img,
+.testimonial-card img,
+.menu-item img,
+.fullmenu-section img {
+  border-radius: var(--radius);
+}
+
+/* GLOBAL HEADING STYLES */
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+/* Section titles (Volledige Menukaart, Waar we zijn, Over OranjeKip, Klantbeoordelingen, Volg ons) */
+h2 {
+  font-size: 2rem;        /* Tutarlı büyüklük */
+  text-align: center;      /* Tüm section başlıkları ortalı */
+  margin-bottom: 30px;     /* Bölümler arası ferah boşluk */
+}
+
+/* Item titles such as “Hele Kip”, “Friet”, “Kippensoep” */
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;      /* Menü ürünlerinde ortalama */
+}
+
+/* HERO başlığı ayrı ve büyük görünmesi için */
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* GLOBAL CARD STANDARDIZATION — TÜM KARTLAR SMOOTH */
+.location-card,
+.testimonial-card,
+.about-card,
+.menu-content img,
+.menu-item img {
+    border-radius: 16px !important;
+}
+
+/* Kart kapsayıcıları için arka plan + box shadow */
+.location-card,
+.testimonial-card,
+.about-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Menü ürünlerinin görselleri daha estetik dursun */
+.menu-item img {
+    border-radius: 12px !important;
+}
+
+/* PDF kartı */
+.fullmenu-section .menu-content {
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+.locations-section {
+  background-color: #fffaf0;
+}
+
+.testimonials-section {
+  background-color: #fff4e6;
+}
