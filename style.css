@@ -113,8 +113,10 @@ body {
 
 .hero-image img {
   width: 100%;
-  height: 300px;
-  object-fit: contain;
+  height: auto;          /* Yüksekliği otomatik yap, orantılı büyüsün */
+  max-height: 400px;     /* İsteğe göre maksimum yükseklik */
+  object-fit: contain;    /* Resmi kırpmadan sığdır */
+  object-position: center top; /* Üstten hizala */
   background: #fff;
   padding: 10px;
   border-radius: 12px;
@@ -680,3 +682,21 @@ section {
     color: var(--accent);
     transform: translateY(-2px); /* Hafif yukarı hareket */
 }
+
+/* Tüm section başlıkları için üst boşluk */
+section h2 {
+    margin-top: 2rem !important;  /* Önceki marginleri geçersiz kılar */
+    margin-bottom: 30px;
+}
+
+/* Tüm ana başlıklar için üst boşluk */
+#menu h2,
+#locations h2,
+#testimonials h2,
+#about h2,
+#follow h2,
+#fullmenu h2 {
+    margin-top: 2rem;
+    margin-bottom: 30px;
+}
+
