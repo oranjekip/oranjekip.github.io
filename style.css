@@ -736,13 +736,25 @@ section h2 {
 }
 
 .preview-banner {
-  background-color: #ff9800;
+  background-color: #ffcc00;
   color: #000;
   text-align: center;
-  padding: 10px;
-  font-weight: 600;
+  padding: 12px 16px;
   font-size: 14px;
+  font-weight: 500;
   position: sticky;
   top: 0;
   z-index: 9999;
+  line-height: 1.4;
+}
+
+.preview-banner strong {
+  font-weight: 700;
+}
+
+.preview-banner .no-orders {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 700;
+  color: #c00000;
 }
