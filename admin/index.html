@@ -4,10 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Management System</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  
+  <!-- Favicon Tanımlamaları -->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=3" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico?v=3" />
 </head>
 <body>
   <!-- Decap CMS Core Script -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Dynamic Favicon Enjection -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const setFavicon = () => {
+        let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = '/images/favicon.ico?v=' + Date.now();
+        document.getElementsByTagName('head')[0].appendChild(link);
+      };
+      setFavicon();
+      setTimeout(setFavicon, 1000);
+    });
+  </script>
 </body>
 </html>
