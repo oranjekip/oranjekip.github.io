@@ -178,10 +178,10 @@ async function initSite() {
   document.getElementById("year").textContent = new Date().getFullYear();
   try {
     const [products, locations, testimonials, site] = await Promise.all([
-      loadJSON("products.json"),
+      loadJSON("menu.json"),
       loadJSON("locations.json"),
-      loadJSON("testimonials.json"),
-      loadJSON("site.json")
+      loadJSON("reviews.json"),
+      loadJSON("settings.json")
     ]);
     renderProducts(products);
     renderLocations(locations);
