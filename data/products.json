@@ -21,26 +21,32 @@
     {
       "name": "Drumsticks (5/10 stuks)",
       "image": "/images/Drumsticks.png",
-      "price": "€7 / €11",
+      "price": "€7 / €12",
       "active": true
     },
     {
       "name": "Kippenbouten (3/5 stuks)",
       "image": "/images/Kippenpoot.png",
-      "price": "€8.5 / €11",
+      "price": "€9 / €14",
       "active": true
     },
     {
       "name": "Crispy Hotwings (6/12 stuks)",
       "image": "/images/Crispy Hotwings.png",
       "price": "€6.5 / €11",
+      "active": false
+    },
+    {
+      "name": "Kip Schnitzel",
+      "image": "/images/Kip Schnitzel.png",
+      "price": "€8",
       "active": true
     },
     {
-      "name": "Schnitzel",
-      "image": "/images/Kip Schnitzel.png",
-      "price": "€7.5",
-      "active": true
+      "name": "Kip Tenders (200g / 400g)",
+      "price": "€6.5 / €11.5",
+      "active": true,
+      "image": "/images/kip-tenders.png"
     },
     {
       "name": "Kip Vingers (Broodje/Bakje)",
@@ -51,7 +57,7 @@
     {
       "name": "Kipworst (Broodje/Bakje)",
       "image": "/images/Kipworst Broodje.png",
-      "price": "€6 / €5.5",
+      "price": "€6.5 / €6",
       "active": true
     },
     {
@@ -63,20 +69,26 @@
     {
       "name": "Rijst",
       "image": "/images/Rijst.png",
-      "price": "€5",
+      "price": "€4.5",
       "active": true
     },
     {
       "name": "Friet (150g)",
       "image": "/images/Friet.png",
-      "price": "€2.5",
+      "price": "€4",
       "active": true
     },
     {
       "name": "Krieltjes (150g)",
       "image": "/images/Krieltjes.png",
-      "price": "€2.5",
+      "price": "€4",
       "active": true
+    },
+    {
+      "name": "Extra Saus (30ml)",
+      "price": "€0.7",
+      "active": true,
+      "image": "/images/saus.png"
     },
     {
       "name": "Cola / Fanta",
