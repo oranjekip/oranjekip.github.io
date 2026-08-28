@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "content"
+    label: "Site İçerik Yönetimi"
+    files:
+      - file: "data/settings.json"
+        label: "Genel Ayarlar & Metinler"
+        name: "settings"
+        fields:
+          - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Banner Görseli", name: "heroImage", widget: "image" }
+          - { label: "Menü Görseli", name: "menuImage", widget: "image" }
+          - { label: "Menü PDF", name: "menuPdf", widget: "file" }
+          - { label: "Hakkımızda Başlık", name: "aboutTitle", widget: "string" }
+          - { label: "Hakkımızda Metni", name: "aboutText", widget: "text" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Uyarı Bannerı Aktif", name: "previewBanner", widget: "boolean" }
+          - { label: "Uyarı Başlığı", name: "previewTitle", widget: "string" }
+          - { label: "Uyarı Metni", name: "previewText", widget: "string" }
+          - { label: "Sipariş Uyarısı", name: "previewOrders", widget: "string" }
+
+      - file: "data/menu.json"
+        label: "Menü Ürünleri"
+        name: "menu"
+        fields:
+          - name: "items"
+            label: "Ürün Listesi"
+            widget: "list"
+            fields:
+              - { label: "Ürün Adı", name: "name", widget: "string" }
+              - { label: "Görsel", name: "image", widget: "image" }
+              - { label: "Fiyat", name: "price", widget: "string" }
+              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+
+      - file: "data/locations.json"
+        label: "Konumlar ve Günler"
+        name: "locations"
+        fields:
+          - name: "items"
+            label: "Konum Listesi"
+            widget: "list"
+            fields:
+              - { label: "Şehir / Konum Adı", name: "name", widget: "string" }
+              - { label: "Gün", name: "day", widget: "string" }
+              - { label: "Saatler", name: "hours", widget: "string" }
+              - { label: "Harita Linki", name: "map", widget: "string" }
+              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+
+      - file: "data/testimonials.json"
+        label: "Klantbeoordelingen (Yorumlar)"
+        name: "testimonials"
+        fields:
+          - name: "items"
+            label: "Yorum Listesi"
+            widget: "list"
+            fields:
+              - { label: "Yorum Metni", name: "text", widget: "text" }
+              - { label: "Müşteri / Şehir", name: "author", widget: "string" }
+              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
