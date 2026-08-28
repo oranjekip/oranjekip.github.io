@@ -1,8 +1,16 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: oranjekip/oranjekip.github.io
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
-collections: []
+collections:
+  - name: "products"
+    label: "Ürünler ve Fiyatlar"
+    file: "data/products.json"
+    fields:
+      - { label: "Ürün Adı", name: "title", widget: "string" }
+      - { label: "Fiyat", name: "price", widget: "string" }
+      - { label: "Resim", name: "image", widget: "image" }
