@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <div class="preview-banner">
@@ -42,111 +42,22 @@
 
     <main>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>OranjeKip</h1>
-        <p class="tagline">Halal Kip — Vers Gegrild — Foodtruck</p>
-    </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>OranjeKip</h1>
+                <p class="tagline">Halal Kip — Vers Gegrild — Foodtruck</p>
+            </div>
 
-    <div class="hero-image">
-        <img src="images/Banner.jpg" alt="OranjeKip foodtruck">
-    </div>
-</section>
+            <div class="hero-image">
+                <img src="images/Banner.jpg" alt="OranjeKip foodtruck">
+            </div>
+        </section>
 
+        <!-- MENU SECTION (ID eklendi ve sabit ürünler silindi) -->
         <section id="menu" class="container menu-section">
             <h2>Ons Menu</h2>
-            <ul class="menu-grid">
-
-                <li class="menu-item card">
-                    <h3>Hele Kip</h3>
-                    <img src="images/hele kip.jpg" alt="Hele kip">
-                    <p class="price">€11</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Halve Kip</h3>
-                    <img src="images/halve kip.png" alt="Halve kip">
-                    <p class="price">€6</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Kipvleugels (5/10 stuks)</h3>
-                    <img src="images/Gegrilde kippenvleugels.png" alt="Kipvleugels">
-                    <p class="price">€6 / €10</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Drumsticks (5/10 stuks)</h3>
-                    <img src="images/Drumsticks.png" alt="Drumsticks">
-                    <p class="price">€7 / €11</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Kippenbouten (3/5 stuks)</h3>
-                    <img src="images/Kippenpoot.png" alt="Kippenbouten">
-                    <p class="price">€8.5 / €11</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Crispy Hotwings (6/12 stuks)</h3>
-                    <img src="images/Crispy Hotwings.png" alt="Crispy Hotwings">
-                    <p class="price">€6.5 / €11</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Schnitzel</h3>
-                    <img src="images/Kip Schnitzel.png" alt="Schnitzel">
-                    <p class="price">€7.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Kip Vingers (Broodje/Bakje)</h3>
-                    <img src="images/Kip Vingers Broodje.png" alt="Kip Vingers">
-                    <p class="price">€6.5 / €6</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Kipworst (Broodje/Bakje)</h3>
-                    <img src="images/Kipworst Broodje.png" alt="Kipworst">
-                    <p class="price">€6 / €5.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Kippensoep (400ml)</h3>
-                    <img src="images/Kippensoep.png" alt="Kippensoep">
-                    <p class="price">€3.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Friet (150g)</h3>
-                    <img src="images/Friet.png" alt="Friet">
-                    <p class="price">€2.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Krieltjes (150g)</h3>
-                    <img src="images/Krieltjes.png" alt="Krieltjes">
-                    <p class="price">€2.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Cola / Fanta</h3>
-                    <img src="images/cola fanta.png" alt="Cola / Fanta">
-                    <p class="price">€2</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Buttermilk (Ayran)</h3>
-                    <img src="images/ayran.png" alt="Buttermilk">
-                    <p class="price">€1.5</p>
-                </li>
-
-                <li class="menu-item card">
-                    <h3>Water</h3>
-                    <img src="images/water.png" alt="Water">
-                    <p class="price">€1</p>
-                </li>
-
+            <ul class="menu-grid" id="menu-container">
+                <!-- Ürünler menu.json dosyasından buraya dinamik yüklenecek -->
             </ul>
         </section>
 
@@ -158,39 +69,11 @@
             </div>
         </section>
 
+        <!-- LOCATIONS SECTION (ID eklendi ve sabit lokasyonlar silindi) -->
         <section id="locations" class="container locations-section">
             <h2>Waar we zijn</h2>
-            <div class="locations-grid">
-                <div class="location-card card">
-                    <h3>Veldhoven – Meiveld</h3>
-                    <p><strong>Maandag:</strong> 11:00 – 16:30</p>
-                    <a href="https://www.google.com/maps?q=Meiveld+Veldhoven" target="_blank">Bekijk op kaart</a>
-                </div>
-                <div class="location-card card">
-                    <h3>Eindhoven – Centrum Markt</h3>
-                    <p><strong>Dinsdag:</strong> 09:00 – 16:00</p>
-                    <a href="https://www.google.com/maps?q=Centrum+Markt+Eindhoven" target="_blank">Bekijk op kaart</a>
-                </div>
-                <div class="location-card card">
-                    <h3>Geldrop – Weekmarkt</h3>
-                    <p><strong>Woensdag:</strong> 11:00 – 17:00</p>
-                    <a href="https://www.google.com/maps?q=Weekmarkt+Geldrop" target="_blank">Bekijk op kaart</a>
-                </div>
-                <div class="location-card card">
-                    <h3>Valkenswaard – Marktplein</h3>
-                    <p><strong>Donderdag:</strong> 09:00 – 17:00</p>
-                    <a href="https://www.google.com/maps?q=Marktplein+Valkenswaard" target="_blank">Bekijk op kaart</a>
-                </div>
-                <div class="location-card card">
-                    <h3>Tilburg – Wagnerplein</h3>
-                    <p><strong>Vrijdag:</strong> 11:00 – 17:00</p>
-                    <a href="https://www.google.com/maps?q=Wagnerplein+Tilburg" target="_blank">Bekijk op kaart</a>
-                </div>
-                <div class="location-card card">
-                    <h3>’s-Hertogenbosch – Warenmarkt Centrum</h3>
-                    <p><strong>Zaterdag:</strong> 09:00 – 17:00</p>
-                    <a href="https://www.google.com/maps?q=Warenmarkt+Centrum+’s-Hertogenbosch" target="_blank">Bekijk op kaart</a>
-                </div>
+            <div class="locations-grid" id="locations-container">
+                <!-- Lokasyonlar locations.json dosyasından buraya dinamik yüklenecek -->
             </div>
         </section>
 
@@ -244,42 +127,21 @@
 
     </main>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <p>© <span id="year"></span> OranjeKip</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> OranjeKip</p>
 
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:oranjekip.nl@gmail.com">oranjekip.nl@gmail.com</a></p>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:oranjekip.nl@gmail.com">oranjekip.nl@gmail.com</a></p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        const btn = document.getElementById("nav-toggle");
-        const nav = document.getElementById("main-nav");
-
-        btn.addEventListener("click", () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true' || false;
-            btn.setAttribute('aria-expanded', !isExpanded);
-            nav.classList.toggle("open");
-        });
-
-        // Sluit nav op klik van link (alleen mobiel)
-        const navLinks = nav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 600) { // Check voor mobiele viewport
-                    btn.setAttribute('aria-expanded', 'false');
-                    nav.classList.remove("open");
-                }
-            });
-        });
-    </script>
-<script>
         // Footer Yılı ve Mobil Menü Kodları
         document.getElementById('year').textContent = new Date().getFullYear();
 
