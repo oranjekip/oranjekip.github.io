@@ -1,0 +1,141 @@
+media:
+  - name: images
+    label: Afbeeldingen
+    input: images
+    output: /images
+    categories: [image]
+  - name: documents
+    label: Documenten
+    input: docs
+    output: /docs
+    categories: [document]
+
+content:
+  - name: products
+    label: Producten
+    type: file
+    path: data/products.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Productnaam
+        type: string
+        required: true
+      - name: price
+        label: Prijs
+        type: string
+        required: true
+      - name: image
+        label: Productfoto
+        type: image
+        options:
+          media: images
+      - name: active
+        label: Zichtbaar op website
+        type: boolean
+
+  - name: locations
+    label: Locaties
+    type: file
+    path: data/locations.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Locatie
+        type: string
+        required: true
+      - name: day
+        label: Dag
+        type: string
+        required: true
+      - name: hours
+        label: Openingstijd
+        type: string
+        required: true
+      - name: map
+        label: Google Maps link
+        type: string
+      - name: active
+        label: Zichtbaar op website
+        type: boolean
+
+  - name: testimonials
+    label: Klantbeoordelingen
+    type: file
+    path: data/testimonials.json
+    format: json
+    list: true
+    fields:
+      - name: text
+        label: Beoordeling
+        type: text
+        required: true
+      - name: author
+        label: Naam / plaats
+        type: string
+        required: true
+      - name: active
+        label: Zichtbaar op website
+        type: boolean
+
+  - name: site
+    label: Website instellingen
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: heroTitle
+        label: Ana başlık
+        type: string
+      - name: tagline
+        label: Alt başlık
+        type: string
+      - name: heroImage
+        label: Hero fotoğrafı
+        type: image
+        options:
+          media: images
+      - name: menuImage
+        label: Menü görseli
+        type: image
+        options:
+          media: images
+      - name: menuPdf
+        label: Menü PDF
+        type: file
+        options:
+          media: documents
+          extensions: [pdf]
+      - name: aboutTitle
+        label: Hakkımızda başlığı
+        type: string
+      - name: aboutText
+        label: Hakkımızda metni
+        type: text
+      - name: instagram
+        label: Instagram
+        type: string
+      - name: facebook
+        label: Facebook
+        type: string
+      - name: email
+        label: E-posta
+        type: string
+      - name: previewBanner
+        label: Ön izleme uyarısını göster
+        type: boolean
+      - name: previewTitle
+        label: Ön izleme başlığı
+        type: string
+      - name: previewText
+        label: Ön izleme metni
+        type: string
+      - name: previewOrders
+        label: Sipariş uyarısı
+        type: string
+
+settings:
+  content:
+    merge: true
