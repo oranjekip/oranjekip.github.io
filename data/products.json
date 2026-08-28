@@ -57,7 +57,7 @@
     "name": "Kippensoep (400ml)",
     "image": "/images/Kippensoep.png",
     "price": "€3.5",
-    "active": true
+    "active": false
   },
   {
     "name": "Friet (150g)",
