@@ -10,9 +10,7 @@
   "facebook": "https://www.facebook.com/oranjekip/",
   "email": "oranjekip.nl@gmail.com",
   "previewBanner": true,
-  <!--
-  "previewTitle": "Dit is een voorlopige website en nog niet de officiële website van Oranje Kip.",
-  "previewText": "Inhoud en vormgeving kunnen nog wijzigen.",
-  "previewOrders": "Er kunnen momenteel geen bestellingen worden geplaatst." 
-  -->
+  "previewTitle": "",
+  "previewText": "",
+  "previewOrders": ""
 }
