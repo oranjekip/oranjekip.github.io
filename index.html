@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oranje Kip</title>
-  <link rel="icon" type="image/ico" href="images/uploads\/favicon.ico" />
+  <title>OranjeKip — Halal Chicken Foodtruck</title>
+  <link rel="icon" type="image/ico" href="images/favicon.ico" />
   <meta name="description" content="OranjeKip — mobiele halal foodtruck met vers gegrilde kipgerechten." />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -178,10 +178,10 @@ async function initSite() {
   document.getElementById("year").textContent = new Date().getFullYear();
   try {
     const [products, locations, testimonials, site] = await Promise.all([
-      loadJSON("menu.json"),
+      loadJSON("products.json"),
       loadJSON("locations.json"),
-      loadJSON("reviews.json"),
-      loadJSON("settings.json")
+      loadJSON("testimonials.json"),
+      loadJSON("site.json")
     ]);
     renderProducts(products);
     renderLocations(locations);

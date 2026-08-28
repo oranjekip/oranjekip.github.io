@@ -14,7 +14,7 @@ content:
   - name: products
     label: Producten
     type: file
-    path: data/menu.json
+    path: data/products.json
     format: json
     list: true
     fields:
@@ -64,7 +64,7 @@ content:
   - name: testimonials
     label: Klantbeoordelingen
     type: file
-    path: data/reviews.json
+    path: data/testimonials.json
     format: json
     list: true
     fields:
@@ -83,7 +83,7 @@ content:
   - name: site
     label: Website instellingen
     type: file
-    path: data/settings.json
+    path: data/site.json
     format: json
     fields:
       - name: heroTitle

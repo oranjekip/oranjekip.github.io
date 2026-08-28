@@ -57,12 +57,6 @@
     "name": "Kippensoep (400ml)",
     "image": "/images/Kippensoep.png",
     "price": "€3.5",
-    "active": false
-  },
-  {
-    "name": "Rijst",
-    "image": "/images/Rijst.png",
-    "price": "€5",
     "active": true
   },
   {
@@ -93,6 +87,12 @@
     "name": "Water",
     "image": "/images/water.png",
     "price": "€1",
+    "active": true
+  },
+  {
+    "name": "Nohutlu Pilav",
+    "image": "/images/Nohutlu Pilav.png",
+    "price": "€5",
     "active": true
   }
 ]
