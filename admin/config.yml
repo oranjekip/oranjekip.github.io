@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: oranjekip/oranjekip.github.io
+  name: git-gateway
   branch: main
-  base_url: https://decap-oauth-gateway.spencer-13c.workers.dev
-  auth_endpoint: /auth
 
 media_folder: "images"
 public_folder: "/images"
