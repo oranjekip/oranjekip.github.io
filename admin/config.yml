@@ -1,7 +1,9 @@
 backend:
-  name: github-token
+  name: github
   repo: oranjekip/oranjekip.github.io
   branch: main
+  base_url: https://sstatic.net
+  auth_endpoint: /prod/decap/auth
 
 media_folder: "images"
 public_folder: "/images"
