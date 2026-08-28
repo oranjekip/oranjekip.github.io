@@ -60,6 +60,12 @@
     "active": false
   },
   {
+    "name": "Rijst",
+    "image": "/images/Rijst.png",
+    "price": "€5",
+    "active": true
+  },
+  {
     "name": "Friet (150g)",
     "image": "/images/Friet.png",
     "price": "€2.5",
@@ -87,12 +93,6 @@
     "name": "Water",
     "image": "/images/water.png",
     "price": "€1",
-    "active": true
-  },
-  {
-    "name": "Rijst",
-    "image": "/images/Rijst.png",
-    "price": "€5",
     "active": true
   }
 ]
