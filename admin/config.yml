@@ -2,8 +2,7 @@ backend:
   name: github
   repo: oranjekip/oranjekip.github.io
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app
-  auth_endpoint: /api/auth
+  auth_type: implicit
 
 media_folder: "images"
 public_folder: "/images"
