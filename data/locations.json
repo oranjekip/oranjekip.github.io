@@ -1,44 +1,10 @@
-[
-  {
-    "name": "Veldhoven – Meiveld",
-    "day": "Maandag",
-    "hours": "11:00 – 16:30",
-    "map": "https://www.google.com/maps?q=Meiveld+Veldhoven",
-    "active": true
-  },
-  {
-    "name": "Eindhoven – Centrum Markt",
-    "day": "Dinsdag",
-    "hours": "09:00 – 16:00",
-    "map": "https://www.google.com/maps?q=Centrum+Markt+Eindhoven",
-    "active": true
-  },
-  {
-    "name": "Geldrop – Weekmarkt",
-    "day": "Woensdag",
-    "hours": "11:00 – 17:00",
-    "map": "https://www.google.com/maps?q=Weekmarkt+Geldrop",
-    "active": true
-  },
-  {
-    "name": "Valkenswaard – Marktplein",
-    "day": "Donderdag",
-    "hours": "09:00 – 17:00",
-    "map": "https://www.google.com/maps?q=Marktplein+Valkenswaard",
-    "active": true
-  },
-  {
-    "name": "Tilburg – Wagnerplein",
-    "day": "Vrijdag",
-    "hours": "11:00 – 17:00",
-    "map": "https://www.google.com/maps?q=Wagnerplein+Tilburg",
-    "active": true
-  },
-  {
-    "name": "’s-Hertogenbosch – Warenmarkt Centrum",
-    "day": "Zaterdag",
-    "hours": "09:00 – 17:00",
-    "map": "https://www.google.com/maps?q=Warenmarkt+Centrum+’s-Hertogenbosch",
-    "active": true
-  }
-]
+{
+  "items": [
+    { "name": "Veldhoven – Meiveld", "day": "Maandag", "hours": "11:00 – 16:30", "map": "https://www.google.com/maps?q=Meiveld+Veldhoven", "active": true },
+    { "name": "Eindhoven – Centrum Markt", "day": "Dinsdag", "hours": "09:00 – 16:00", "map": "https://www.google.com/maps?q=Centrum+Markt+Eindhoven", "active": true },
+    { "name": "Geldrop – Weekmarkt", "day": "Woensdag", "hours": "11:00 – 17:00", "map": "https://www.google.com/maps?q=Weekmarkt+Geldrop", "active": true },
+    { "name": "Valkenswaard – Marktplein", "day": "Donderdag", "hours": "09:00 – 17:00", "map": "https://www.google.com/maps?q=Marktplein+Valkenswaard", "active": true },
+    { "name": "Tilburg – Wagnerplein", "day": "Vrijdag", "hours": "11:00 – 17:00", "map": "https://www.google.com/maps?q=Wagnerplein+Tilburg", "active": true },
+    { "name": "’s-Hertogenbosch – Warenmarkt Centrum", "day": "Zaterdag", "hours": "09:00 – 17:00", "map": "https://www.google.com/maps?q=Warenmarkt+Centrum+’s-Hertogenbosch", "active": true }
+  ]
+}

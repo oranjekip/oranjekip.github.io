@@ -177,15 +177,15 @@ function escapeAttr(value) { return escapeHtml(value); }
 async function initSite() {
   document.getElementById("year").textContent = new Date().getFullYear();
   try {
-    const [products, locations, testimonials, site] = await Promise.all([
+    const [productsData, locationsData, testimonialsData, site] = await Promise.all([
       loadJSON("products.json"),
       loadJSON("locations.json"),
       loadJSON("testimonials.json"),
       loadJSON("site.json")
     ]);
-    renderProducts(products);
-    renderLocations(locations);
-    renderTestimonials(testimonials);
+    renderProducts(productsData.items || productsData);
+    renderLocations(locationsData.items || locationsData);
+    renderTestimonials(testimonialsData.items || testimonialsData);
     renderSite(site);
   } catch (error) {
     console.error(error);

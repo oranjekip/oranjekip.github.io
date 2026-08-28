@@ -6,7 +6,7 @@ backend:
   auth_endpoint: /auth
 
 media_folder: "images"
-public_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "site_data"
@@ -15,11 +15,9 @@ collections:
       - name: "products"
         label: "Ürünler ve Fiyatlar"
         file: "data/products.json"
-        json_metadata:
-          format: "json"
         fields:
           - label: "Ürün Listesi"
-            name: ""
+            name: "items"
             widget: "list"
             fields:
               - { label: "Ürün Adı", name: "name", widget: "string" }
@@ -30,11 +28,9 @@ collections:
       - name: "locations"
         label: "Lokasyonlar (Waar we zijn)"
         file: "data/locations.json"
-        json_metadata:
-          format: "json"
         fields:
           - label: "Lokasyon Listesi"
-            name: ""
+            name: "items"
             widget: "list"
             fields:
               - { label: "Konum Adı", name: "name", widget: "string" }
@@ -46,11 +42,9 @@ collections:
       - name: "testimonials"
         label: "Müşteri Yorumları"
         file: "data/testimonials.json"
-        json_metadata:
-          format: "json"
         fields:
           - label: "Yorum Listesi"
-            name: ""
+            name: "items"
             widget: "list"
             fields:
               - { label: "Yorum Metni", name: "text", widget: "text" }
@@ -60,8 +54,6 @@ collections:
       - name: "site"
         label: "Genel Site Ayarları"
         file: "data/site.json"
-        json_metadata:
-          format: "json"
         fields:
           - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
           - { label: "Alt Başlık (Tagline)", name: "tagline", widget: "string" }

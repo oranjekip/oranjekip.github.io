@@ -1,22 +1,8 @@
-[
-  {
-    "text": "Heerlijk vers en perfect gekruid! De hele kip is echt een aanrader.",
-    "author": "Jan de Vries, Veldhoven",
-    "active": true
-  },
-  {
-    "text": "Altijd snelle service en super vriendelijke medewerkers. Mijn favoriete stop op dinsdag.",
-    "author": "Lisa van den Berg, Eindhoven",
-    "active": true
-  },
-  {
-    "text": "De crispy hotwings zijn echt top! Krokant van buiten, sappig van binnen.",
-    "author": "Tom Janssen, Tilburg",
-    "active": true
-  },
-  {
-    "text": "Goede prijs, grote porties en altijd vers. Ik kom elke week terug.",
-    "author": "Sophie Willems, Geldrop",
-    "active": true
-  }
-]
+{
+  "items": [
+    { "text": "Heerlijk vers en perfect gekruid! De hele kip is echt een aanrader.", "author": "Jan de Vries, Veldhoven", "active": true },
+    { "text": "Altijd snelle service en super vriendelijke medewerkers. Mijn favoriete stop op dinsdag.", "author": "Lisa van den Berg, Eindhoven", "active": true },
+    { "text": "De crispy hotwings zijn echt top! Krokant van buiten, sappig van binnen.", "author": "Tom Janssen, Tilburg", "active": true },
+    { "text": "Goede prijs, grote porties en altijd vers. Ik kom elke week terug.", "author": "Sophie Willems, Geldrop", "active": true }
+  ]
+}
