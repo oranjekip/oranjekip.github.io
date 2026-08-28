@@ -279,6 +279,62 @@
             });
         });
     </script>
+<script>
+        // Footer Yılı ve Mobil Menü Kodları
+        document.getElementById('year').textContent = new Date().getFullYear();
 
+        const btn = document.getElementById("nav-toggle");
+        const nav = document.getElementById("main-nav");
+
+        btn.addEventListener("click", () => {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true' || false;
+            btn.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle("open");
+        });
+
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    nav.classList.remove("open");
+                }
+            });
+        });
+
+        // ==========================================
+        // JSON VERİLERİNİ ÇEKEN CMS KODLARI
+        // ==========================================
+
+        // 1. Menüyü Yükle
+        fetch('./data/menu.json')
+          .then(res => res.json())
+          .then(data => {
+            const activeItems = data.items.filter(item => item.active);
+            document.getElementById('menu-container').innerHTML = activeItems.map(item => `
+              <li class="menu-item card">
+                  <h3>${item.name}</h3>
+                  <img src="${item.image}" alt="${item.name}">
+                  <p class="price">${item.price}</p>
+              </li>
+            `).join('');
+          })
+          .catch(err => console.error('Menü yüklenemedi:', err));
+
+        // 2. Lokasyonları Yükle
+        fetch('./data/locations.json')
+          .then(res => res.json())
+          .then(data => {
+            const activeLocations = data.items.filter(item => item.active);
+            document.getElementById('locations-container').innerHTML = activeLocations.map(item => `
+              <div class="location-card card">
+                  <h3>${item.name}</h3>
+                  <p><strong>${item.day}:</strong> ${item.hours}</p>
+                  <a href="${item.map}" target="_blank">Bekijk op kaart</a>
+              </div>
+            `).join('');
+          })
+          .catch(err => console.error('Lokasyonlar yüklenemedi:', err));
+    </script>
 </body>
 </html>
