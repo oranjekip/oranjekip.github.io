@@ -168,35 +168,35 @@
         // JSON VERİLERİNİ ÇEKEN CMS KODLARI
         // ==========================================
 
-        // 1. Menüyü Yükle
-        fetch('./data/menu.json')
-          .then(res => res.json())
-          .then(data => {
-            const activeItems = data.items.filter(item => item.active);
-            document.getElementById('menu-container').innerHTML = activeItems.map(item => `
-              <li class="menu-item card">
-                  <h3>${item.name}</h3>
-                  <img src="${item.image}" alt="${item.name}">
-                  <p class="price">${item.price}</p>
-              </li>
-            `).join('');
-          })
-          .catch(err => console.error('Menü yüklenemedi:', err));
+// 1. Menüyü Yükle (products.json dosyası doğrudan dizi olduğu için data.filter yapılır)
+fetch('./data/products.json')
+  .then(res => res.json())
+  .then(data => {
+    const activeItems = data.filter(item => item.active);
+    document.getElementById('menu-container').innerHTML = activeItems.map(item => `
+      <li class="menu-item card">
+          <h3>${item.name}</h3>
+          <img src="${item.image}" alt="${item.name}">
+          <p class="price">${item.price}</p>
+      </li>
+    `).join('');
+  })
+  .catch(err => console.error('Menü yüklenemedi:', err));
 
-        // 2. Lokasyonları Yükle
-        fetch('./data/locations.json')
-          .then(res => res.json())
-          .then(data => {
-            const activeLocations = data.items.filter(item => item.active);
-            document.getElementById('locations-container').innerHTML = activeLocations.map(item => `
-              <div class="location-card card">
-                  <h3>${item.name}</h3>
-                  <p><strong>${item.day}:</strong> ${item.hours}</p>
-                  <a href="${item.map}" target="_blank">Bekijk op kaart</a>
-              </div>
-            `).join('');
-          })
-          .catch(err => console.error('Lokasyonlar yüklenemedi:', err));
-    </script>
+// 2. Lokasyonları Yükle
+fetch('./data/locations.json')
+  .then(res => res.json())
+  .then(data => {
+    const activeLocations = data.filter(item => item.active);
+    document.getElementById('locations-container').innerHTML = activeLocations.map(item => `
+      <div class="location-card card">
+          <h3>${item.name}</h3>
+          <p><strong>${item.day}:</strong> ${item.hours}</p>
+          <a href="${item.map}" target="_blank">Bekijk op kaart</a>
+      </div>
+    `).join('');
+  })
+  .catch(err => console.error('Lokasyonlar yüklenemedi:', err));
 </body>
 </html>
+        
