@@ -1,8 +1,7 @@
 backend:
-  name: github
+  name: github-token
   repo: oranjekip/oranjekip.github.io
   branch: main
-  auth_type: implicit
 
 media_folder: "images"
 public_folder: "/images"
