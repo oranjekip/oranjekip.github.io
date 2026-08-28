@@ -4,13 +4,21 @@ backend:
   branch: main
 
 media_folder: "images"
-public_folder: "/images"
+public_folder: "images"
 
 collections:
-  - name: "products"
-    label: "Ürünler ve Fiyatlar"
-    file: "data/products.json"
-    fields:
-      - { label: "Ürün Adı", name: "title", widget: "string" }
-      - { label: "Fiyat", name: "price", widget: "string" }
-      - { label: "Resim", name: "image", widget: "image" }
+  - name: "data"
+    label: "Site Verileri"
+    files:
+      - label: "Ürünler"
+        name: "products"
+        file: "data/products.json"
+        fields:
+          - label: "Ürün Listesi"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "Ürün Adı", name: "name", widget: "string" }
+              - { label: "Fiyat", name: "price", widget: "string" }
+              - { label: "Resim", name: "image", widget: "image" }
+              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
