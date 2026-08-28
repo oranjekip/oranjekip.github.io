@@ -9,69 +9,60 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "site_data"
-    label: "Website İçerikleri"
-    files:
-      - label: "Ürünler ve Fiyatlar"
+  - name: "products"
+    label: "Ürünler ve Fiyatlar"
+    file: "data/products.json"
+    fields:
+      - label: "Ürün Listesi"
         name: "products"
-        file: "data/products.json"
-        json_node_mode: "raw"
+        widget: "list"
         fields:
-          - label: "Ürün Listesi"
-            name: ""
-            widget: "list"
-            summary: "{{fields.name}} - {{fields.price}}"
-            fields:
-              - { label: "Ürün Adı", name: "name", widget: "string" }
-              - { label: "Fiyat", name: "price", widget: "string" }
-              - { label: "Resim", name: "image", widget: "image" }
-              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+          - { label: "Ürün Adı", name: "name", widget: "string" }
+          - { label: "Görsel", name: "image", widget: "image" }
+          - { label: "Fiyat", name: "price", widget: "string" }
+          - { label: "Aktif mi?", name: "active", widget: "boolean" }
 
-      - label: "Lokasyonlar (Waar we zijn)"
+  - name: "locations"
+    label: "Lokasyonlar (Waar we zijn)"
+    file: "data/locations.json"
+    fields:
+      - label: "Lokasyon Listesi"
         name: "locations"
-        file: "data/locations.json"
-        json_node_mode: "raw"
+        widget: "list"
         fields:
-          - label: "Lokasyon Listesi"
-            name: ""
-            widget: "list"
-            summary: "{{fields.name}} ({{fields.day}})"
-            fields:
-              - { label: "Konum / Şehir", name: "name", widget: "string" }
-              - { label: "Gün", name: "day", widget: "string" }
-              - { label: "Çalışma Saatleri", name: "hours", widget: "string" }
-              - { label: "Google Maps Linki", name: "map", widget: "string", required: false }
-              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+          - { label: "Konum Adı", name: "name", widget: "string" }
+          - { label: "Gün", name: "day", widget: "string" }
+          - { label: "Saatler", name: "hours", widget: "string" }
+          - { label: "Harita Linki", name: "map", widget: "string" }
+          - { label: "Aktif mi?", name: "active", widget: "boolean" }
 
-      - label: "Müşteri Yorumları"
+  - name: "testimonials"
+    label: "Müşteri Yorumları"
+    file: "data/testimonials.json"
+    fields:
+      - label: "Yorum Listesi"
         name: "testimonials"
-        file: "data/testimonials.json"
-        json_node_mode: "raw"
+        widget: "list"
         fields:
-          - label: "Yorum Listesi"
-            name: ""
-            widget: "list"
-            summary: "{{fields.author}}"
-            fields:
-              - { label: "Yorum Metni", name: "text", widget: "text" }
-              - { label: "Yazar / Şehir", name: "author", widget: "string" }
-              - { label: "Aktif mi?", name: "active", widget: "boolean", default: true }
+          - { label: "Yorum Metni", name: "text", widget: "text" }
+          - { label: "Yazar", name: "author", widget: "string" }
+          - { label: "Aktif mi?", name: "active", widget: "boolean" }
 
-      - label: "Genel Site Ayarları"
-        name: "site"
-        file: "data/site.json"
-        fields:
-          - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
-          - { label: "Hero Alt Başlık", name: "tagline", widget: "string" }
-          - { label: "Hero Resmi", name: "heroImage", widget: "image" }
-          - { label: "Menü Görseli", name: "menuImage", widget: "image" }
-          - { label: "Menü PDF", name: "menuPdf", widget: "file" }
-          - { label: "Hakkımızda Başlık", name: "aboutTitle", widget: "string" }
-          - { label: "Hakkımızda Metin", name: "aboutText", widget: "text" }
-          - { label: "Instagram", name: "instagram", widget: "string" }
-          - { label: "Facebook", name: "facebook", widget: "string" }
-          - { label: "E-Posta", name: "email", widget: "string" }
-          - { label: "Duyuru Bannerı Açık mı?", name: "previewBanner", widget: "boolean", default: false }
-          - { label: "Duyuru Başlığı", name: "previewTitle", widget: "string", required: false }
-          - { label: "Duyuru Metni", name: "previewText", widget: "string", required: false }
-          - { label: "Sipariş Uyarısı Metni", name: "previewOrders", widget: "string", required: false }
+  - name: "settings"
+    label: "Genel Site Ayarları"
+    file: "data/settings.json"
+    fields:
+      - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
+      - { label: "Alt Başlık (Tagline)", name: "tagline", widget: "string" }
+      - { label: "Hero Banner Görseli", name: "heroImage", widget: "image" }
+      - { label: "Menu Görseli", name: "menuImage", widget: "image" }
+      - { label: "Menu PDF", name: "menuPdf", widget: "file" }
+      - { label: "Hakkımızda Başlık", name: "aboutTitle", widget: "string" }
+      - { label: "Hakkımızda Metni", name: "aboutText", widget: "text" }
+      - { label: "Instagram Linki", name: "instagram", widget: "string" }
+      - { label: "Facebook Linki", name: "facebook", widget: "string" }
+      - { label: "E-posta", name: "email", widget: "string" }
+      - { label: "Önizleme Bannerı Aktif mi?", name: "previewBanner", widget: "boolean" }
+      - { label: "Önizleme Başlığı", name: "previewTitle", widget: "string" }
+      - { label: "Önizleme Metni", name: "previewText", widget: "text" }
+      - { label: "Önizleme Sipariş Uyarısı", name: "previewOrders", widget: "string" }
