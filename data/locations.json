@@ -8,17 +8,17 @@
       "active": true
     },
     {
-      "name": "Venlo - Weekmarkt",
-      "day": "Zaterdag",
-      "hours": "08:00-15:00",
-      "map": "https://maps.app.goo.gl/Vjpbue397y8VGeSQA",
-      "active": true
-    },
-    {
       "name": "Oss - Ravenstein",
       "hours": "13:00 – 17:30",
       "day": "Vrijdag",
       "map": "https://maps.app.goo.gl/UhptiipGDYoFrd8y8",
+      "active": true
+    },
+    {
+      "name": "Venlo - Weekmarkt",
+      "day": "Zaterdag",
+      "hours": "08:00-15:00",
+      "map": "https://maps.app.goo.gl/Vjpbue397y8VGeSQA",
       "active": true
     }
   ]
