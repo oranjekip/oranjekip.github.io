@@ -6,6 +6,13 @@
       "hours": "09:00 – 16:00",
       "map": "https://www.google.com/maps?q=Centrum+Markt+Eindhoven",
       "active": true
+    },
+    {
+      "name": "Venlo - Weekmarkt",
+      "day": "Zaterdag",
+      "hours": "08:00-15:00",
+      "map": "https://maps.app.goo.gl/Vjpbue397y8VGeSQA",
+      "active": true
     }
   ]
 }
