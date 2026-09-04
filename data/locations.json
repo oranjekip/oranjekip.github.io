@@ -8,6 +8,13 @@
       "active": true
     },
     {
+      "name": "Cuijk - Weekmarkt",
+      "day": "Woensdag",
+      "hours": "11:00 – 16:30",
+      "map": "https://maps.app.goo.gl/kSGPrLkTiJ5so6mf6",
+      "active": true
+    },
+    {
       "name": "Oss - Ravenstein",
       "hours": "13:00 – 17:30",
       "day": "Vrijdag",
