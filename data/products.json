@@ -40,7 +40,7 @@
       "name": "Kip Schnitzel (200gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
       "price": "€6,5",
-      "active": true
+      "active": false
     },
     {
       "name": "Kip Tenders (200g/400g)",
@@ -154,7 +154,7 @@
       "name": "Water",
       "image": "/images/water.png",
       "price": "€1",
-      "active": true
+      "active": false
     }
   ]
 }
