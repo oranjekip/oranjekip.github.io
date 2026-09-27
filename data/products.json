@@ -8,7 +8,7 @@
     },
     {
       "name": "Halve Kip",
-      "image": "/images/halve kip.png",
+      "image": "/images/chatgpt-image-sep-27-2026-01_25_31-pm.png",
       "price": "€7",
       "active": true
     },
@@ -56,7 +56,7 @@
     },
     {
       "name": "Kipworst (Broodje/Bakje)",
-      "image": "/images/p1.5.png",
+      "image": "/images/p2.2.png",
       "price": "€6.5 / €6",
       "active": true
     },
@@ -73,6 +73,18 @@
       "active": true
     },
     {
+      "name": "Farafel",
+      "image": "/images/p2.6.png",
+      "price": "€6",
+      "active": true
+    },
+    {
+      "name": "Kipnuggets",
+      "image": "/images/p2.3.png",
+      "price": "€6",
+      "active": true
+    },
+    {
       "name": "Friet (150g)",
       "image": "/images/p2.4.png",
       "price": "€4",
@@ -85,7 +97,7 @@
       "active": true
     },
     {
-      "name": "Extra Saus (30ml)",
+      "name": "Extra Saus (80ml)",
       "price": "€0.7",
       "active": true,
       "image": "/images/p2.7.png"
