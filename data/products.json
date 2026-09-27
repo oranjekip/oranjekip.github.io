@@ -51,7 +51,7 @@
     {
       "name": "Kipvingers Broodje",
       "image": "/images/p2.1.png",
-      "price": "€6.5",
+      "price": "€7",
       "active": true
     },
     {
@@ -63,7 +63,7 @@
     {
       "name": "Kipworst Broodje",
       "image": "/images/p2.2.png",
-      "price": "€6.5",
+      "price": "€7",
       "active": true
     },
     {
@@ -85,15 +85,27 @@
       "active": true
     },
     {
-      "name": "Farafel",
-      "image": "/images/p2.6.png",
+      "name": "Falafel Broodje",
+      "image": "/images/chatgpt-image-sep-27-2026-01_54_05-pm.png",
+      "price": "€7",
+      "active": true
+    },
+    {
+      "name": "Falafel Bakje",
+      "image": "/images/chatgpt-image-sep-27-2026-01_56_18-pm.png",
+      "price": "€6",
+      "active": true
+    },
+    {
+      "name": "Kipnuggets (6 stuks)",
+      "image": "/images/p2.3.png",
       "price": "€5",
       "active": true
     },
     {
-      "name": "Kipnuggets",
+      "name": "Kipnuggets (9 stuks)",
       "image": "/images/p2.3.png",
-      "price": "€6",
+      "price": "€7",
       "active": true
     },
     {
@@ -118,6 +130,12 @@
       "name": "Cola / Fanta",
       "image": "/images/cola fanta.png",
       "price": "€2",
+      "active": true
+    },
+    {
+      "name": "Redbull",
+      "image": "/images/chatgpt-image-sep-27-2026-01_46_00-pm.png",
+      "price": "€2.5",
       "active": true
     },
     {
