@@ -40,24 +40,36 @@
       "name": "Kip Schnitzel",
       "image": "/images/Kip Schnitzel.png",
       "price": "€8",
-      "active": true
+      "active": false
     },
     {
-      "name": "Kip Tenders (200g / 400g)",
-      "price": "€6.5 / €11.5",
+      "name": "Kip Tenders (200g)",
+      "price": "€6",
       "active": true,
       "image": "/images/p1.6.png"
     },
     {
-      "name": "Kip Vingers (Broodje/Bakje)",
+      "name": "Kipvingers Broodje",
       "image": "/images/p2.1.png",
-      "price": "€6.5 / €6",
+      "price": "€6.5",
       "active": true
     },
     {
-      "name": "Kipworst (Broodje/Bakje)",
+      "name": "Kipvingers Bakje",
+      "image": "/images/chatgpt-image-sep-27-2026-01_34_32-pm.png",
+      "price": "€6",
+      "active": true
+    },
+    {
+      "name": "Kipworst Broodje",
       "image": "/images/p2.2.png",
-      "price": "€6.5 / €6",
+      "price": "€6.5",
+      "active": true
+    },
+    {
+      "name": "Kipworst Bakje",
+      "image": "/images/chatgpt-image-sep-27-2026-01_38_18-pm.png",
+      "price": "€6",
       "active": true
     },
     {
@@ -75,7 +87,7 @@
     {
       "name": "Farafel",
       "image": "/images/p2.6.png",
-      "price": "€6",
+      "price": "€5",
       "active": true
     },
     {
@@ -109,7 +121,7 @@
       "active": true
     },
     {
-      "name": "Buttermilk (Ayran)",
+      "name": "Buttermilk",
       "image": "/images/ayran.png",
       "price": "€1.5",
       "active": true
@@ -118,7 +130,7 @@
       "name": "Water",
       "image": "/images/water.png",
       "price": "€1",
-      "active": true
+      "active": false
     }
   ]
 }
