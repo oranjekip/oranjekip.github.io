@@ -2,7 +2,7 @@
   "items": [
     {
       "name": "Hele Kip",
-      "image": "/images/hele kip.jpg",
+      "image": "/images/p1.1.png",
       "price": "€12",
       "active": true
     },
@@ -14,19 +14,19 @@
     },
     {
       "name": "Kipvleugels (5/10 stuks)",
-      "image": "/images/Gegrilde kippenvleugels.png",
+      "image": "/images/p1.4.png",
       "price": "€6 / €10",
       "active": true
     },
     {
       "name": "Drumsticks (5/10 stuks)",
-      "image": "/images/Drumsticks.png",
+      "image": "/images/p1.3.png",
       "price": "€7 / €12",
       "active": true
     },
     {
       "name": "Kippenbouten (3/5 stuks)",
-      "image": "/images/Kippenpoot.png",
+      "image": "/images/p1.2.png",
       "price": "€9 / €14",
       "active": true
     },
@@ -46,17 +46,17 @@
       "name": "Kip Tenders (200g / 400g)",
       "price": "€6.5 / €11.5",
       "active": true,
-      "image": "/images/kip-tenders.png"
+      "image": "/images/p1.6.png"
     },
     {
       "name": "Kip Vingers (Broodje/Bakje)",
-      "image": "/images/Kip Vingers Broodje.png",
+      "image": "/images/p2.1.png",
       "price": "€6.5 / €6",
       "active": true
     },
     {
       "name": "Kipworst (Broodje/Bakje)",
-      "image": "/images/Kipworst Broodje.png",
+      "image": "/images/p1.5.png",
       "price": "€6.5 / €6",
       "active": true
     },
@@ -68,19 +68,19 @@
     },
     {
       "name": "Rijst",
-      "image": "/images/Rijst.png",
+      "image": "/images/p1.7.png",
       "price": "€4.5",
       "active": true
     },
     {
       "name": "Friet (150g)",
-      "image": "/images/Friet.png",
+      "image": "/images/p2.4.png",
       "price": "€4",
       "active": true
     },
     {
       "name": "Krieltjes (150g)",
-      "image": "/images/Krieltjes.png",
+      "image": "/images/p2.5.png",
       "price": "€4",
       "active": true
     },
@@ -88,7 +88,7 @@
       "name": "Extra Saus (30ml)",
       "price": "€0.7",
       "active": true,
-      "image": "/images/saus.png"
+      "image": "/images/p2.7.png"
     },
     {
       "name": "Cola / Fanta",
