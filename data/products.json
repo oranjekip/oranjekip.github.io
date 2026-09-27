@@ -31,15 +31,21 @@
       "active": true
     },
     {
-      "name": "Crispy Hotwings (6/12 stuks)",
-      "image": "/images/Crispy Hotwings.png",
-      "price": "€6.5 / €11",
-      "active": false
+      "name": "Crispy Hotwings (6 stuks)",
+      "image": "/images/chatgpt-image-sep-27-2026-02_26_15-pm.png",
+      "price": "€6.5",
+      "active": true
+    },
+    {
+      "name": "Crispy Hotwings (12 stuks)",
+      "price": "€12",
+      "active": true,
+      "image": "/images/chatgpt-image-sep-27-2026-02_26_15-pm.png"
     },
     {
       "name": "Kip Schnitzel",
-      "image": "/images/Kip Schnitzel.png",
-      "price": "€8",
+      "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
+      "price": "€6",
       "active": false
     },
     {
