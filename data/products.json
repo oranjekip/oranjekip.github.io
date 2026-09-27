@@ -128,8 +128,14 @@
     },
     {
       "name": "Redbull",
-      "image": "/images/chatgpt-image-sep-27-2026-02_29_40-pm.png",
+      "image": "/images/chatgpt-image-sep-27-2026-03_38_15-pm.png",
       "price": "€2.5",
+      "active": true
+    },
+    {
+      "name": "Capri-Sun",
+      "image": "/images/chatgpt-image-sep-27-2026-03_34_15-pm.png",
+      "price": "€1.5",
       "active": true
     },
     {
