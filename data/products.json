@@ -33,14 +33,14 @@
     {
       "name": "Crispy Hotwings (6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-03_21_04-pm.png",
-      "price": "€6.5 / €12",
+      "price": "€6,5 / €12",
       "active": true
     },
     {
-      "name": "Kip Schnitzel",
+      "name": "Kip Schnitzel (200gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
-      "price": "€6",
-      "active": false
+      "price": "€6,5",
+      "active": true
     },
     {
       "name": "Kip Tenders (200g/400g)",
@@ -74,14 +74,14 @@
     },
     {
       "name": "Kippensoep (400ml)",
-      "image": "/images/Kippensoep.png",
+      "image": "/images/chatgpt-image-sep-27-2026-06_21_05-pm.png",
       "price": "€3.5",
-      "active": false
+      "active": true
     },
     {
       "name": "Rijst",
       "image": "/images/chatgpt-image-sep-27-2026-02_53_43-pm.png",
-      "price": "€4.5",
+      "price": "€5",
       "active": true
     },
     {
@@ -116,7 +116,7 @@
     },
     {
       "name": "Extra Saus (80ml)",
-      "price": "€0.7",
+      "price": "€0,75",
       "active": true,
       "image": "/images/chatgpt-image-sep-27-2026-02_55_58-pm.png"
     },
@@ -129,7 +129,7 @@
     {
       "name": "Redbull (25cl)",
       "image": "/images/chatgpt-image-sep-27-2026-03_38_15-pm.png",
-      "price": "€2.5",
+      "price": "€2,5",
       "active": true
     },
     {
@@ -141,20 +141,20 @@
     {
       "name": "Capri-Sun",
       "image": "/images/chatgpt-image-sep-27-2026-03_34_15-pm.png",
-      "price": "€1.5",
-      "active": false
+      "price": "€1,5",
+      "active": true
     },
     {
       "name": "Buttermilk (25cl)",
       "image": "/images/ayran.png",
-      "price": "€1.5",
+      "price": "€1,5",
       "active": true
     },
     {
       "name": "Water",
       "image": "/images/water.png",
       "price": "€1",
-      "active": false
+      "active": true
     }
   ]
 }
