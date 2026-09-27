@@ -9,7 +9,7 @@
     {
       "name": "Halve Kip",
       "image": "/images/chatgpt-image-sep-27-2026-02_48_07-pm.png",
-      "price": "€7",
+      "price": "€6,5",
       "active": true
     },
     {
@@ -43,8 +43,8 @@
       "active": false
     },
     {
-      "name": "Kip Tenders (200g)",
-      "price": "€6",
+      "name": "Kip Tenders (200g/400g)",
+      "price": "€6,5 / €12",
       "active": true,
       "image": "/images/chatgpt-image-sep-27-2026-02_52_14-pm.png"
     },
