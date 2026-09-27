@@ -121,25 +121,31 @@
       "image": "/images/chatgpt-image-sep-27-2026-02_55_58-pm.png"
     },
     {
-      "name": "Cola / Fanta",
-      "image": "/images/cola fanta.png",
+      "name": "Coca Cola / Fanta (33cl)",
+      "image": "/images/chatgpt-image-sep-27-2026-05_13_49-pm.png",
       "price": "€2",
       "active": true
     },
     {
-      "name": "Redbull",
+      "name": "Redbull (25cl)",
       "image": "/images/chatgpt-image-sep-27-2026-03_38_15-pm.png",
       "price": "€2.5",
+      "active": true
+    },
+    {
+      "image": "/images/chatgpt-image-sep-27-2026-05_32_34-pm.png",
+      "name": "Fernandes Frisdrank (33cl)",
+      "price": "€2,5",
       "active": true
     },
     {
       "name": "Capri-Sun",
       "image": "/images/chatgpt-image-sep-27-2026-03_34_15-pm.png",
       "price": "€1.5",
-      "active": true
+      "active": false
     },
     {
-      "name": "Buttermilk",
+      "name": "Buttermilk (25cl)",
       "image": "/images/ayran.png",
       "price": "€1.5",
       "active": true
