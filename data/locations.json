@@ -1,24 +1,24 @@
 {
   "items": [
     {
-      "name": "Cuijk - Weekmarkt",
+      "name": "'s-Hertogenbosch - Woensdagmarkt",
       "day": "Woensdag",
-      "hours": "11:00 – 16:30",
-      "map": "https://maps.app.goo.gl/kSGPrLkTiJ5so6mf6",
+      "hours": "09:00 – 15:00",
+      "map": "https://maps.app.goo.gl/p3k3WPcmyZ2RVT6o8",
       "active": true
     },
     {
-      "name": "Oss - Ravenstein",
-      "hours": "13:00 – 17:30",
+      "name": "Best - Wilhelminaplein",
+      "hours": "08:00 – 18:00",
+      "day": "Donderdag",
+      "map": "https://maps.app.goo.gl/1Fbro1Z6P8eum73Y8",
+      "active": true
+    },
+    {
+      "name": "Son en Breugel - Raadhuisplein",
       "day": "Vrijdag",
-      "map": "https://maps.app.goo.gl/UhptiipGDYoFrd8y8",
-      "active": true
-    },
-    {
-      "name": "Venlo - Weekmarkt",
-      "day": "Zaterdag",
-      "hours": "08:00-15:00",
-      "map": "https://maps.app.goo.gl/Vjpbue397y8VGeSQA",
+      "hours": "09:00 – 18:00",
+      "map": "https://maps.app.goo.gl/Pp49QdA1BBS2WRue9",
       "active": true
     }
   ]
