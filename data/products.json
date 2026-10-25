@@ -13,34 +13,34 @@
       "active": true
     },
     {
-      "name": "Kipvleugels (6/12 stuks)",
+      "name": "Kipvleugels (1/6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_59_43-pm.png",
-      "price": "€6 / €11",
+      "price": "€1.2 / 6 / €11",
       "active": true
     },
     {
-      "name": "Drumsticks (5/10 stuks)",
+      "name": "Drumsticks (1/5/10 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_49_49-pm.png",
-      "price": "€7 / €12",
+      "price": "€1,5 / €7 / €12",
       "active": true
     },
     {
-      "name": "Kippenbouten (3/5 stuks)",
+      "name": "Kippenbouten (1/3/5 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_42_16-pm.png",
-      "price": "€9 / €14",
+      "price": "€3,5 / €9 / €14",
       "active": true
     },
     {
-      "name": "Crispy Hotwings (6/12 stuks)",
+      "name": "Crispy Hotwings (1/6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-03_21_04-pm.png",
-      "price": "€6,5 / €12",
+      "price": "€1,3 / €6,5 / €12",
       "active": true
     },
     {
       "name": "Kip Schnitzel (200gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
       "price": "€6,5",
-      "active": false
+      "active": true
     },
     {
       "name": "Kip Tenders (200g/400g)",
@@ -88,7 +88,7 @@
       "name": "Falafel Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_31_41-pm.png",
       "price": "€7",
-      "active": true
+      "active": false
     },
     {
       "name": "Falafel Bakje",
