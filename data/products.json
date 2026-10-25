@@ -76,7 +76,7 @@
       "name": "Kippensoep (400ml)",
       "image": "/images/chatgpt-image-sep-27-2026-06_21_05-pm.png",
       "price": "€3.5",
-      "active": true
+      "active": false
     },
     {
       "name": "Rijst",
