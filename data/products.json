@@ -67,14 +67,14 @@
       "active": true
     },
     {
-      "name": "Kipworst Broodje",
-      "image": "/images/chatgpt-image-sep-27-2026-02_38_53-pm.png",
+      "name": "Grillworst Broodje",
+      "image": "/images/gegrilde-worstsandwich-in-vintage-krantenpapier.png",
       "price": "€7",
       "active": true
     },
     {
-      "name": "Kipworst Bakje",
-      "image": "/images/chatgpt-image-sep-27-2026-02_45_19-pm.png",
+      "name": "Grillworst Bakje",
+      "image": "/images/gegrilde-worstschijfjes-met-ketchup-en-mayo.png",
       "price": "€6",
       "active": true
     },
