@@ -49,6 +49,12 @@
       "image": "/images/chatgpt-image-sep-27-2026-02_52_14-pm.png"
     },
     {
+      "name": "Kipnuggets (1/6/9 stuks)",
+      "image": "/images/chatgpt-image-sep-27-2026-02_54_50-pm.png",
+      "price": "€1 / €5 / €7",
+      "active": true
+    },
+    {
       "name": "Kipvingers Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_39_58-pm.png",
       "price": "€7",
@@ -91,12 +97,6 @@
       "active": false
     },
     {
-      "name": "Rijst",
-      "image": "/images/chatgpt-image-sep-27-2026-02_53_43-pm.png",
-      "price": "€5",
-      "active": true
-    },
-    {
       "name": "Falafel Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_31_41-pm.png",
       "price": "€7",
@@ -109,9 +109,9 @@
       "active": true
     },
     {
-      "name": "Kipnuggets (1/6/9 stuks)",
-      "image": "/images/chatgpt-image-sep-27-2026-02_54_50-pm.png",
-      "price": "€1 / €5 / €7",
+      "name": "Rijst",
+      "image": "/images/chatgpt-image-sep-27-2026-02_53_43-pm.png",
+      "price": "€5",
       "active": true
     },
     {
