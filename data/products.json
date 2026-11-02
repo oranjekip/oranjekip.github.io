@@ -3,25 +3,25 @@
     {
       "name": "Hele Kip",
       "image": "/images/chatgpt-image-sep-27-2026-01_58_58-pm.png",
-      "price": "€12",
+      "price": "€11.5",
       "active": true
     },
     {
       "name": "Halve Kip",
       "image": "/images/chatgpt-image-sep-27-2026-02_48_07-pm.png",
-      "price": "€6,5",
+      "price": "€6",
       "active": true
     },
     {
       "name": "Kipvleugels (1/6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_59_43-pm.png",
-      "price": "€1,2 / 6 / €11",
+      "price": "€1 / 5.5 / €10",
       "active": true
     },
     {
       "name": "Drumsticks (1/5/10 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_49_49-pm.png",
-      "price": "€1,5 / €7 / €12",
+      "price": "€1,5 / €7 / €13",
       "active": true
     },
     {
@@ -34,16 +34,16 @@
       "name": "Crispy Hotwings (1/6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-03_21_04-pm.png",
       "price": "€1,3 / €6,5 / €12",
-      "active": true
+      "active": false
     },
     {
-      "name": "Schnitzel (200gr)",
+      "name": "Schnitzel (240gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
-      "price": "€6,5",
+      "price": "€6",
       "active": true
     },
     {
-      "name": "Kip Tenders (200g/400g)",
+      "name": "Kip Tenders (240g/480g)",
       "price": "€6,5 / €12",
       "active": true,
       "image": "/images/chatgpt-image-sep-27-2026-02_52_14-pm.png"
@@ -57,7 +57,7 @@
     {
       "name": "Kipvingers Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_39_58-pm.png",
-      "price": "€7",
+      "price": "€6,5",
       "active": true
     },
     {
@@ -69,24 +69,24 @@
     {
       "name": "Grillworst Broodje",
       "image": "/images/gegrilde-worstsandwich-in-vintage-krantenpapier.png",
-      "price": "€7",
+      "price": "€6,5",
       "active": true
     },
     {
-      "name": "Grillworst Bakje",
+      "name": "Grillworst Bakje (240g)",
       "image": "/images/zwarte-tray-met-gegrilde-worst-en-sauzen.png",
       "price": "€6",
       "active": true
     },
     {
       "name": "Hotdog Broodje",
-      "price": "€6",
+      "price": "€5",
       "active": true,
       "image": "/images/ambachtelijke-circusstijl-hotdog-in-kraftpapier.png"
     },
     {
       "name": "Hotdog Bakje (1/3 stuks)",
-      "price": "€2,75 / €7,5",
+      "price": "€2,25 / €6",
       "active": true,
       "image": "/images/gegrilde-worsten-met-sausjes.png"
     },
@@ -99,25 +99,25 @@
     {
       "name": "Falafel Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_31_41-pm.png",
-      "price": "€7",
+      "price": "€5,5",
       "active": true
     },
     {
       "name": "Falafel Bakje",
       "image": "/images/chatgpt-image-sep-27-2026-02_35_12-pm.png",
-      "price": "€6",
+      "price": "€5",
       "active": true
     },
     {
       "name": "Rijst",
       "image": "/images/chatgpt-image-sep-27-2026-02_53_43-pm.png",
-      "price": "€5",
+      "price": "€4,5",
       "active": true
     },
     {
       "name": "Friet (180g)",
       "image": "/images/chatgpt-image-sep-27-2026-02_57_43-pm.png",
-      "price": "€4",
+      "price": "€3,5",
       "active": true
     },
     {
@@ -127,7 +127,7 @@
       "active": true
     },
     {
-      "name": "Extra Saus (30ml)",
+      "name": "Extra Saus (40ml)",
       "price": "€0,75",
       "active": true,
       "image": "/images/chatgpt-image-sep-27-2026-02_55_58-pm.png"
