@@ -100,13 +100,13 @@
       "name": "Falafel Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_31_41-pm.png",
       "price": "€5,5",
-      "active": true
+      "active": false
     },
     {
       "name": "Falafel Bakje",
       "image": "/images/chatgpt-image-sep-27-2026-02_35_12-pm.png",
       "price": "€5",
-      "active": true
+      "active": false
     },
     {
       "name": "Rijst",
