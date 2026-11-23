@@ -22,6 +22,8 @@
     <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
       <ul>
         <li><a href="#menu">Ons Menu</a></li>
+        <li><a href="#bestellen">Bestellen & Afhalen</a></li>
+        <li><a href="#evenementen">Evenementen</a></li>
         <li><a href="#about">Over</a></li>
         <li><a href="#fullmenu">Volledige Menukaart</a></li>
         <li><a href="#locations">Waar we zijn</a></li>
@@ -45,6 +47,28 @@
 <section id="menu" class="container menu-section">
   <h2>Ons Menu</h2>
   <ul id="product-grid" class="menu-grid"></ul>
+</section>
+
+<section id="bestellen" class="container service-section">
+  <div class="service-card card">
+    <div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+    <div><h2>Bestellen & Afhalen via WhatsApp</h2>
+      <p>Bestel eenvoudig via WhatsApp en haal je versbereide kipgerechten op het door ons bevestigde tijdstip af bij onze foodtruck.</p>
+      <p><strong>Zo werkt het:</strong> Bekijk ons menu, stuur je bestelling met de gewenste afhaaldatum, afhaaltijd en locatie, en wacht op onze bevestiging.</p>
+      <p class="service-note">Alleen afhalen bij onze foodtruck. Geen bezorging of online betaling. Je bestelling is pas definitief na onze bevestiging.</p>
+      <a id="whatsapp-order" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Bestel via WhatsApp</a>
+    </div>
+  </div>
+</section>
+<section id="evenementen" class="container service-section">
+  <div class="service-card card">
+    <div class="service-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+    <div><h2>Evenementen & Privéfeesten</h2>
+      <p>Een verjaardag, bedrijfsfeest, buurtfeest, festival of ander evenement organiseren? OranjeKip verzorgt heerlijke, versbereide kipgerechten vanuit onze foodtruck op locatie.</p>
+      <p>Vertel ons de datum, locatie, het soort evenement en het verwachte aantal gasten. We bespreken graag de mogelijkheden en maken een vrijblijvende offerte.</p>
+      <a id="whatsapp-event" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Vraag een offerte aan</a>
+    </div>
+  </div>
 </section>
 
 <section id="fullmenu" class="container fullmenu-section">
@@ -86,6 +110,7 @@
     <p>© <span id="year"></span> OranjeKip</p>
     <div class="footer-contact">
       <h3>Contact</h3>
+      <p>WhatsApp: <a id="whatsapp-contact" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer">+31 6 182 192 62</a></p>
       <p>Email: <a id="email-link" href="mailto:oranjekip.nl@gmail.com">oranjekip.nl@gmail.com</a></p>
     </div>
   </div>
@@ -151,6 +176,17 @@ function renderSite(site) {
   document.getElementById("about-text").textContent = site.aboutText || "";
   document.getElementById("instagram-link").href = site.instagram || "#";
   document.getElementById("facebook-link").href = site.facebook || "#";
+
+  const phone = String(site.whatsappNumber || "+31 6 182 192 62");
+  const digits = phone.replace(/\D/g, "");
+  const waBase = "https://wa.me/" + digits;
+  const orderMessage = "Hallo OranjeKip! Ik wil graag een bestelling plaatsen.\n\nBestelling (producten en aantallen):\nGewenste afhaaldatum:\nGewenste afhaaltijd:\nAfhaallocatie (foodtruck):\nNaam:\n\nGraag ontvang ik een bevestiging. Bedankt!";
+  const eventMessage = "Hallo OranjeKip! Ik wil graag een vrijblijvende offerte aanvragen voor een evenement.\n\nSoort evenement:\nDatum:\nLocatie/adres:\nVerwacht aantal gasten:\nNaam:\nOverige wensen:\n\nAlvast bedankt!";
+  document.getElementById("whatsapp-order").href = waBase + "?text=" + encodeURIComponent(orderMessage);
+  document.getElementById("whatsapp-event").href = waBase + "?text=" + encodeURIComponent(eventMessage);
+  const contact = document.getElementById("whatsapp-contact");
+  contact.href = waBase;
+  contact.textContent = phone;
 
   const email = site.email || "";
   const emailLink = document.getElementById("email-link");
