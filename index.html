@@ -18,7 +18,7 @@
       <img id="site-logo" src="/images/logo-oranjekip-new.png" alt="OranjeKip logo" class="brand-image">
       <span class="brand-text">OranjeKip</span>
     </a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <div class="header-actions"><div class="language-switcher" role="group" aria-label="Website language"><button type="button" data-lang="nl" aria-pressed="true">🇳🇱 NL</button><button type="button" data-lang="tr">🇹🇷 TR</button><button type="button" data-lang="en">🇬🇧 EN</button><button type="button" data-lang="ar">العربية AR</button></div><button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
       <ul>
         <li><a href="#menu">Ons Menu</a></li>
@@ -29,7 +29,7 @@
         <li><a href="#locations">Waar we zijn</a></li>
         <li><a href="#follow">Volg ons</a></li>
       </ul>
-    </nav>
+    </nav></div>
   </div>
 </header>
 
@@ -118,6 +118,45 @@
 
 <script>
 const DATA_PATH = "data/";
+let activeLanguage = "nl";
+let translations = {};
+let currentData = null;
+function translated(value) {
+  if (activeLanguage === "nl") return value;
+  return translations.dictionary?.[String(value)] || value;
+}
+async function changeLanguage(language) {
+  if (!["nl", "tr", "en", "ar"].includes(language)) return;
+  try {
+    const next = language === "nl" ? {} : await loadJSON(`lang-${language}.json`);
+    translations = next;
+    activeLanguage = language;
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-lang]").forEach(b => {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === language));
+    });
+    localStorage.setItem("oranjekip-language", language);
+    if (currentData) renderAll();
+  } catch (error) { console.error("Language file could not be loaded:", error); }
+}
+function renderAll() {
+  if (!currentData) return;
+  const {productsData, locationsData, testimonialsData, site, order, event} = currentData;
+  renderProducts(productsData.items || productsData);
+  renderLocations(locationsData.items || locationsData);
+  renderTestimonials(testimonialsData.items || testimonialsData);
+  renderSite(site, order, event);
+  document.querySelectorAll(".main-nav a").forEach((a, i) => {
+    a.textContent = (translations.nav || ["Ons Menu", "Bestellen & Afhalen", "Evenementen", "Over", "Volledige Menukaart", "Waar we zijn", "Volg ons"])[i];
+  });
+  const ids = ["#menu h2", "#fullmenu h2", "#locations h2", "#testimonials h2", "#follow h2", ".footer-contact h3", "#menu-pdf"];
+  const dutch = ["Ons Menu", "Volledige Menukaart", "Waar we zijn", "Klantbeoordelingen", "Volg ons", "Contact", "Menu downloaden / PDF openen"];
+  ids.forEach((selector, i) => { const el = document.querySelector(selector); if (el) el.textContent = (translations.sections || dutch)[i]; });
+  document.getElementById("nav-toggle").textContent = (translations.sections || dutch)[8] || "Menu";
+}
+document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => changeLanguage(b.dataset.lang)));
+
 
 async function loadJSON(file) {
   const response = await fetch(DATA_PATH + file + "?v=" + Date.now());
@@ -132,8 +171,8 @@ function renderProducts(products) {
     const item = document.createElement("li");
     item.className = "menu-item card";
     item.innerHTML = `
-      <h3>${escapeHtml(product.name)}</h3>
-      <img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" loading="lazy">
+      <h3>${escapeHtml(translated(product.name))}</h3>
+      <img src="${escapeAttr(product.image)}" alt="${escapeAttr(translated(product.name))}" loading="lazy">
       <p class="price">${escapeHtml(product.price)}</p>`;
     grid.appendChild(item);
   });
@@ -147,8 +186,8 @@ function renderLocations(locations) {
     card.className = "location-card card";
     card.innerHTML = `
       <h3>${escapeHtml(location.name)}</h3>
-      <p><strong>${escapeHtml(location.day)}:</strong> ${escapeHtml(location.hours)}</p>
-      ${location.map ? `<a href="${escapeAttr(location.map)}" target="_blank" rel="noopener">Bekijk op kaart</a>` : ""}`;
+      <p><strong>${escapeHtml(translated(location.day))}:</strong> ${escapeHtml(location.hours)}</p>
+      ${location.map ? `<a href="${escapeAttr(location.map)}" target="_blank" rel="noopener">${escapeHtml(translated("Bekijk op kaart"))}</a>` : ""}`;
     grid.appendChild(card);
   });
 }
@@ -160,7 +199,7 @@ function renderTestimonials(items) {
     const card = document.createElement("div");
     card.className = "testimonial-card card";
     card.innerHTML = `
-      <p class="testimonial-text">"${escapeHtml(item.text)}"</p>
+      <p class="testimonial-text">"${escapeHtml(translated(item.text))}"</p>
       <p class="testimonial-author">- ${escapeHtml(item.author)}</p>`;
     grid.appendChild(card);
   });
@@ -171,11 +210,11 @@ function renderService(data, prefix, sectionId) {
   section.hidden = data.enabled === false;
   for (const field of ["title", "description", "buttonLabel"]) {
     const element = document.getElementById(prefix + "-" + (field === "buttonLabel" ? "button-label" : field));
-    if (element) element.textContent = data[field] || "";
+    if (element) element.textContent = translated(data[field] || "");
   }
   const secondary = document.getElementById(prefix + (prefix === "order" ? "-instructions" : "-details"));
-  secondary.textContent = data[prefix === "order" ? "instructions" : "details"] || "";
-  if (prefix === "order") document.getElementById("order-note").textContent = data.note || "";
+  secondary.textContent = translated(data[prefix === "order" ? "instructions" : "details"] || "");
+  if (prefix === "order") document.getElementById("order-note").textContent = translated(data.note || "");
   const img = document.getElementById(prefix + "-service-image");
   if (data.image) { img.src = data.image; img.hidden = false; img.parentElement.classList.add("has-image"); }
   else { img.removeAttribute("src"); img.hidden = true; img.parentElement.classList.remove("has-image"); }
@@ -190,12 +229,12 @@ function renderSite(site, order, event) {
   const favicon = document.getElementById("site-favicon");
   favicon.href = site.faviconImage || "/images/favicon-oranjekip.png";
   document.getElementById("hero-title").textContent = site.heroTitle || "";
-  document.getElementById("hero-tagline").textContent = site.tagline || "";
+  document.getElementById("hero-tagline").textContent = translated(site.tagline || "");
   document.getElementById("hero-image").src = site.heroImage || "";
   document.getElementById("menu-image").src = site.menuImage || "";
   document.getElementById("menu-pdf").href = site.menuPdf || "#";
-  document.getElementById("about-title").textContent = site.aboutTitle || "";
-  document.getElementById("about-text").textContent = site.aboutText || "";
+  document.getElementById("about-title").textContent = translated(site.aboutTitle || "");
+  document.getElementById("about-text").textContent = translated(site.aboutText || "");
   document.getElementById("instagram-link").href = site.instagram || "#";
   document.getElementById("facebook-link").href = site.facebook || "#";
 
@@ -204,8 +243,8 @@ function renderSite(site, order, event) {
   const waBase = "https://wa.me/" + digits;
   const orderMessage = order.whatsappMessage || "Hallo OranjeKip! Ik wil graag een bestelling plaatsen.";
   const eventMessage = event.whatsappMessage || "Hallo OranjeKip! Ik wil graag een offerte aanvragen.";
-  document.getElementById("whatsapp-order").href = waBase + "?text=" + encodeURIComponent(orderMessage);
-  document.getElementById("whatsapp-event").href = waBase + "?text=" + encodeURIComponent(eventMessage);
+  document.getElementById("whatsapp-order").href = waBase + "?text=" + encodeURIComponent(translated(orderMessage));
+  document.getElementById("whatsapp-event").href = waBase + "?text=" + encodeURIComponent(translated(eventMessage));
   const contact = document.getElementById("whatsapp-contact");
   contact.href = waBase;
   contact.textContent = phone;
@@ -219,9 +258,9 @@ function renderSite(site, order, event) {
   banner.hidden = !site.previewBanner;
   if (site.previewBanner) {
     banner.innerHTML =
-      `<strong>${escapeHtml(site.previewTitle || "")}</strong><br>` +
-      `${escapeHtml(site.previewText || "")}<br>` +
-      `<span class="no-orders">${escapeHtml(site.previewOrders || "")}</span>`;
+      `<strong>${escapeHtml(activeLanguage === "nl" ? (site.previewTitle || "") : (translations.preview?.previewTitle || site.previewTitle || ""))}</strong><br>` +
+      `${escapeHtml(activeLanguage === "nl" ? (site.previewText || "") : (translations.preview?.previewText || site.previewText || ""))}<br>` +
+      `<span class="no-orders">${escapeHtml(activeLanguage === "nl" ? (site.previewOrders || "") : (translations.preview?.previewOrders || site.previewOrders || ""))}</span>`;
   }
 }
 
@@ -243,10 +282,8 @@ async function initSite() {
       loadJSON("order.json"),
       loadJSON("events.json")
     ]);
-    renderProducts(productsData.items || productsData);
-    renderLocations(locationsData.items || locationsData);
-    renderTestimonials(testimonialsData.items || testimonialsData);
-    renderSite(site, order, event);
+    currentData = {productsData, locationsData, testimonialsData, site, order, event};
+    await changeLanguage(localStorage.getItem("oranjekip-language") || "nl");
   } catch (error) {
     console.error(error);
     document.getElementById("product-grid").innerHTML =
