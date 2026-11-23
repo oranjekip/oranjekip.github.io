@@ -19,7 +19,7 @@
       "active": true
     },
     {
-      "name": "Kipvleugels (3/6/12 stuks)",
+      "name": "Vleugels (3/6/12 stuks)",
       "image": "/images/chatgpt-image-sep-27-2026-02_59_43-pm.png",
       "price": "€3 / 5.5 / €10",
       "active": true
@@ -37,45 +37,51 @@
       "active": true
     },
     {
+      "name": "Tenders (240g)",
+      "price": "€6,5",
+      "active": true,
+      "image": "/images/chatgpt-image-sep-27-2026-02_52_14-pm.png"
+    },
+    {
       "name": "Schnitzel (240gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_23_26-pm.png",
       "price": "€6",
       "active": true
     },
     {
-      "name": "Kip Tenders (240g/480g)",
-      "price": "€6,5 / €12",
-      "active": true,
-      "image": "/images/chatgpt-image-sep-27-2026-02_52_14-pm.png"
+      "name": "Nuggets (120g / 240g)",
+      "image": "/images/chatgpt-image-sep-27-2026-02_54_50-pm.png",
+      "price": "€3 / €5,5",
+      "active": true
     },
     {
-      "name": "Kipnuggets (1/6/9 stuks)",
-      "image": "/images/chatgpt-image-sep-27-2026-02_54_50-pm.png",
-      "price": "€1 / €5 / €7",
+      "name": "Friet (200g)",
+      "image": "/images/chatgpt-image-sep-27-2026-02_57_43-pm.png",
+      "price": "€3,5",
       "active": true
     },
     {
       "name": "Kipvingers Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_39_58-pm.png",
-      "price": "€6,5",
+      "price": "€6",
       "active": true
     },
     {
       "name": "Kipvingers Bakje",
       "image": "/images/zwarte-tray-met-gekruide-kipstukjes-ketchup-en-mayo.png",
-      "price": "€6",
+      "price": "€6,5",
       "active": true
     },
     {
       "name": "Grillworst Broodje",
       "image": "/images/gegrilde-worstsandwich-in-vintage-krantenpapier.png",
-      "price": "€6,5",
+      "price": "€6",
       "active": true
     },
     {
       "name": "Grillworst Bakje (240g)",
       "image": "/images/zwarte-tray-met-gegrilde-worst-en-sauzen.png",
-      "price": "€6",
+      "price": "€6,5",
       "active": true
     },
     {
@@ -99,13 +105,13 @@
     {
       "name": "Falafel Broodje",
       "image": "/images/chatgpt-image-sep-27-2026-02_31_41-pm.png",
-      "price": "€5,5",
+      "price": "€5",
       "active": true
     },
     {
       "name": "Falafel Bakje",
       "image": "/images/chatgpt-image-sep-27-2026-02_35_12-pm.png",
-      "price": "€5",
+      "price": "€5,5",
       "active": true
     },
     {
@@ -115,22 +121,22 @@
       "active": true
     },
     {
-      "name": "Friet (180g)",
-      "image": "/images/chatgpt-image-sep-27-2026-02_57_43-pm.png",
-      "price": "€3,5",
+      "name": "Lumpia (1 / 5 stuks)",
+      "image": "/images/lumpia.jpg",
+      "price": "€1,7 / €7,5",
       "active": true
     },
     {
-      "name": "Krieltjes (400 gr)",
+      "name": "Krieltjes (250 gr)",
       "image": "/images/chatgpt-image-sep-27-2026-02_58_25-pm.png",
-      "price": "€5",
+      "price": "€3,5",
       "active": true
     },
     {
       "name": "Extra Saus (40ml)",
       "price": "€0,75",
       "active": true,
-      "image": "/images/chatgpt-image-sep-27-2026-02_55_58-pm.png"
+      "image": "/images/extra-saus2.jpg"
     },
     {
       "name": "Coca Cola / Fanta (33cl)",
@@ -145,20 +151,14 @@
       "active": true
     },
     {
-      "image": "/images/chatgpt-image-sep-27-2026-05_32_34-pm.png",
-      "name": "Fernandes Frisdrank (33cl)",
+      "image": "/images/coca-cola-fanta-redbull-fernandes.jpg",
+      "name": "Coca Cola / Fanta / Redbull / Fernandes",
       "price": "€2,5",
       "active": true
     },
     {
-      "name": "Capri-Sun (20cl)",
-      "image": "/images/chatgpt-image-sep-27-2026-03_34_15-pm.png",
-      "price": "€1,5",
-      "active": true
-    },
-    {
-      "name": "Karnemelk (25cl)",
-      "image": "/images/ayran.png",
+      "name": "Capri-Sun / Karnemelk",
+      "image": "/images/capri-sun-karnemelk.jpg",
       "price": "€1,5",
       "active": true
     },
