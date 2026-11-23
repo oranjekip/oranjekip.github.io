@@ -2,13 +2,13 @@
   "items": [
     {
       "name": "Rijst Box",
-      "image": "/images/gemini_generated_image_cgdevzcgdevzcgde.jpg",
+      "image": "/images/grilled-chicken-pilaf-with-ayran.png",
       "price": "€9,95",
       "active": true
     },
     {
       "name": "Nuggets Box",
-      "image": "/images/gemini_generated_image_xehqxxxehqxxxehq.jpg",
+      "image": "/images/fernandes-green-punch-chicken-box.png",
       "price": "€9,95",
       "active": true
     },
@@ -20,13 +20,13 @@
     },
     {
       "name": "Tenders Box",
-      "image": "/images/gemini_generated_image_jr69ugjr69ugjr69.jpg",
+      "image": "/images/crispy-chicken-box-with-red-bull.png",
       "price": "€10,95",
       "active": true
     },
     {
       "name": "Kipvingers Box",
-      "image": "/images/gemini_generated_image_4u6pp14u6pp14u6p.jpg",
+      "image": "/images/fernandes-green-punch-chicken-box.png",
       "price": "€10,95",
       "active": true
     },
