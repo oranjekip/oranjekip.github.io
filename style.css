@@ -774,3 +774,75 @@ section h2 {
 .service-section[hidden], .service-image[hidden] { display: none !important; }
 .service-image { width: min(100%, 330px); height: auto; max-height: 260px; object-fit: cover; border-radius: 12px; align-self: center; }
 .service-card p { white-space: pre-line; }
+
+
+/* Service cards: CMS images must never force text into the 66px icon column.
+   The original 2-column grid had THREE children (image, icon, text), so the
+   text was automatically placed into the narrow first column of row two. */
+#bestellen .service-card, #evenementen .service-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  text-align: left;
+  padding: clamp(22px, 4vw, 42px);
+  width: 100%;
+  min-width: 0;
+}
+#bestellen .service-card.has-image, #evenementen .service-card.has-image {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+#bestellen .service-content, #evenementen .service-content {
+  min-width: 0;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+#bestellen .service-image, #evenementen .service-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 370px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+}
+#bestellen .service-image[hidden], #evenementen .service-image[hidden] { display: none !important; }
+#bestellen .service-icon, #evenementen .service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  background: #eaf8ee;
+  border-radius: 14px;
+  padding: 0;
+  margin-bottom: 12px;
+}
+#evenementen .service-icon { color: #e87519; background: #fff2e7; }
+#bestellen .service-content h2, #evenementen .service-content h2 {
+  margin: 0 0 14px;
+  line-height: 1.2;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  text-align: left;
+}
+#bestellen .service-content p, #evenementen .service-content p {
+  margin: 0 0 13px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+#bestellen .service-button, #evenementen .service-button {
+  width: auto;
+  max-width: 100%;
+  min-width: 180px;
+  text-align: center;
+  white-space: normal;
+}
+@media (max-width: 720px) {
+  #bestellen .service-card.has-image, #evenementen .service-card.has-image {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #bestellen .service-image, #evenementen .service-image { max-height: 300px; }
+  #bestellen .service-button, #evenementen .service-button { width: 100%; }
+}

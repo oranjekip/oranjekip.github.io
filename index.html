@@ -52,8 +52,7 @@
 <section id="bestellen" class="container service-section">
   <div class="service-card card">
     <img id="order-service-image" class="service-image" alt="Bestellen en afhalen" hidden>
-    <div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-    <div><h2 id="order-title">Bestellen & Afhalen via WhatsApp</h2>
+    <div class="service-content"><div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div><h2 id="order-title">Bestellen & Afhalen via WhatsApp</h2>
       <p id="order-description"></p>
       <p id="order-instructions"></p>
       <p id="order-note" class="service-note"></p>
@@ -64,8 +63,7 @@
 <section id="evenementen" class="container service-section">
   <div class="service-card card">
     <img id="event-service-image" class="service-image" alt="Evenementen en privéfeesten" hidden>
-    <div class="service-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
-    <div><h2 id="event-title">Evenementen & Privéfeesten</h2>
+    <div class="service-content"><div class="service-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div><h2 id="event-title">Evenementen & Privéfeesten</h2>
       <p id="event-description"></p>
       <p id="event-details"></p>
       <a id="whatsapp-event" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span id="event-button-label">Vraag een offerte aan</span></a>
@@ -179,8 +177,8 @@ function renderService(data, prefix, sectionId) {
   secondary.textContent = data[prefix === "order" ? "instructions" : "details"] || "";
   if (prefix === "order") document.getElementById("order-note").textContent = data.note || "";
   const img = document.getElementById(prefix + "-service-image");
-  if (data.image) { img.src = data.image; img.hidden = false; }
-  else { img.removeAttribute("src"); img.hidden = true; }
+  if (data.image) { img.src = data.image; img.hidden = false; img.parentElement.classList.add("has-image"); }
+  else { img.removeAttribute("src"); img.hidden = true; img.parentElement.classList.remove("has-image"); }
 }
 
 function renderSite(site, order, event) {
