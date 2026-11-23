@@ -88,8 +88,8 @@
   <h2>Volledige Menukaart</h2>
   <div class="menu-content card">
     <div class="menu-flyer-grid" style="display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:center;gap:clamp(10px,3vw,32px);width:100%;max-width:1100px;margin:0 auto;">
-      <button class="menu-flyer-trigger" type="button" data-flyer="images/OranjeKip Menu.png" data-title="Volledige Menukaart" aria-label="Volledige Menukaart büyüt">
-        <img id="menu-image" src="images/OranjeKip Menu.png" alt="Volledige Menukaart" loading="lazy">
+      <button class="menu-flyer-trigger" type="button" data-flyer="/images/oranje-kip-chalkboard-menu-1-.png" data-title="Volledige Menukaart" aria-label="Volledige Menukaart büyüt">
+        <img id="menu-image" src="/images/oranje-kip-chalkboard-menu-1-.png" alt="Volledige Menukaart" loading="lazy">
         <span>Bekijk volledige menukaart ⤢</span>
       </button>
       <button class="menu-flyer-trigger" type="button" data-flyer="images/menu-boxes-flyer.webp" data-title="Menu Boxes" aria-label="Menu Boxes flyer büyüt">
@@ -252,8 +252,18 @@ function renderSite(site, order, event) {
   document.getElementById("hero-title").textContent = site.heroTitle || "";
   document.getElementById("hero-tagline").textContent = translated(site.tagline || "");
   document.getElementById("hero-image").src = site.heroImage || "";
-  document.getElementById("menu-image").src = site.menuImage || "";
-  document.getElementById("menu-pdf").href = site.menuPdf || "#";
+  // CMS is the single source of truth for both the thumbnail and full-screen image.
+  const flyerSettings = [
+    ["menu-image", site.menuImage, "/images/oranje-kip-chalkboard-menu-1-.png"],
+    ["menu-boxes-image", site.menuBoxesImage, "/images/menu-boxes-flyer.webp"]
+  ];
+  flyerSettings.forEach(([id, configured, fallback]) => {
+    const img = document.getElementById(id);
+    if (!img) return;
+    const path = String(configured || fallback).trim();
+    img.src = path;
+    img.closest(".menu-flyer-trigger")?.setAttribute("data-flyer", path);
+  });
   document.getElementById("about-title").textContent = translated(site.aboutTitle || "");
   document.getElementById("about-text").textContent = translated(site.aboutText || "");
   document.getElementById("instagram-link").href = site.instagram || "#";
@@ -342,8 +352,9 @@ initSite();
   if (!dialog || !image || !dialog.showModal) return;
   document.querySelectorAll('.menu-flyer-trigger').forEach(button => {
     button.addEventListener('click', () => {
-      image.src = button.dataset.flyer;
-      image.alt = button.dataset.title;
+      const thumbnail = button.querySelector('img');
+      image.src = thumbnail?.currentSrc || thumbnail?.src || button.dataset.flyer;
+      image.alt = button.dataset.title || thumbnail?.alt || "Flyer";
       dialog.showModal();
     });
   });
