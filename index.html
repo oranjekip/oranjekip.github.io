@@ -18,9 +18,8 @@
   <div class="container header-inner">
     <a class="brand" href="/">
       <img id="site-logo" src="/images/logo-oranjekip-new.png" alt="OranjeKip logo" class="brand-image">
-      <span class="brand-text">OranjeKip</span>
     </a>
-    <div class="header-actions"><div class="language-switcher" role="group" aria-label="Website language"><button type="button" data-lang="nl" aria-pressed="true">🇳🇱 NL</button><button type="button" data-lang="tr">🇹🇷 TR</button><button type="button" data-lang="en">🇬🇧 EN</button><button type="button" data-lang="ar">العربية AR</button></div><button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <div class="header-actions"><div class="language-switcher" role="group" aria-label="Website language"><button type="button" data-lang="nl" aria-pressed="true">🇳🇱 NL</button><button type="button" data-lang="tr">🇹🇷 TR</button><button type="button" data-lang="en">🇬🇧 EN</button></div><button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Navigatiemenu openen">☰ Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
       <ul>
         <li><a href="#menu">Ons Menu</a></li>
@@ -128,13 +127,13 @@ function translated(value) {
   return translations.dictionary?.[String(value)] || value;
 }
 async function changeLanguage(language) {
-  if (!["nl", "tr", "en", "ar"].includes(language)) return;
+  if (!["nl", "tr", "en"].includes(language)) return;
   try {
     const next = language === "nl" ? {} : await loadJSON(`lang-${language}.json`);
     translations = next;
     activeLanguage = language;
     document.documentElement.lang = language;
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = "ltr";
     document.querySelectorAll("[data-lang]").forEach(b => {
       b.setAttribute("aria-pressed", String(b.dataset.lang === language));
     });
@@ -155,7 +154,7 @@ function renderAll() {
   const ids = ["#menu h2", "#fullmenu h2", "#locations h2", "#testimonials h2", "#follow h2", ".footer-contact h3", "#menu-pdf"];
   const dutch = ["Ons Menu", "Volledige Menukaart", "Waar we zijn", "Klantbeoordelingen", "Volg ons", "Contact", "Menu downloaden / PDF openen"];
   ids.forEach((selector, i) => { const el = document.querySelector(selector); if (el) el.textContent = (translations.sections || dutch)[i]; });
-  document.getElementById("nav-toggle").textContent = (translations.sections || dutch)[8] || "Menu";
+  document.getElementById("nav-toggle").textContent = "☰ " + ((translations.sections || dutch)[8] || "Menu");
 }
 document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => changeLanguage(b.dataset.lang)));
 
@@ -285,7 +284,7 @@ async function initSite() {
       loadJSON("events.json")
     ]);
     currentData = {productsData, locationsData, testimonialsData, site, order, event};
-    await changeLanguage(localStorage.getItem("oranjekip-language") || "nl");
+    await changeLanguage(["nl", "tr", "en"].includes(localStorage.getItem("oranjekip-language")) ? localStorage.getItem("oranjekip-language") : "nl");
   } catch (error) {
     console.error(error);
     document.getElementById("product-grid").innerHTML =
@@ -302,7 +301,7 @@ btn.addEventListener("click", () => {
 });
 nav.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 1100) {
       btn.setAttribute("aria-expanded", "false");
       nav.classList.remove("open");
     }
