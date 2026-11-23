@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "name": "Rijst Deal",
+      "image": "/images/gemini_generated_image_cgdevzcgdevzcgde.jpg",
+      "price": "€9,95",
+      "active": true
+    },
+    {
+      "name": "Vleugels Box",
+      "price": "€9,95",
+      "image": "/images/gemini_generated_image_25xah625xah625xa.jpg",
+      "active": true
+    },
+    {
+      "name": "Tenders Box",
+      "image": "/images/gemini_generated_image_jr69ugjr69ugjr69.jpg",
+      "price": "€10,95",
+      "active": true
+    },
+    {
+      "name": "Kipvingers Box",
+      "image": "/images/gemini_generated_image_4u6pp14u6pp14u6p.jpg",
+      "price": "€10,95",
+      "active": true
+    },
+    {
       "name": "Hele Kip",
       "image": "/images/chatgpt-image-sep-27-2026-01_58_58-pm.png",
       "price": "€11.5",
