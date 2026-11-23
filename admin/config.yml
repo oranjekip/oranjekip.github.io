@@ -55,6 +55,8 @@ collections:
         label: "Genel Site Ayarları"
         file: "data/site.json"
         fields:
+          - { label: "Site Logosu (üst menü)", name: "logoImage", widget: "image", required: false, hint: "PNG veya WebP önerilir. Kare görsel kullanın." }
+          - { label: "Favicon (tarayıcı sekmesi)", name: "faviconImage", widget: "image", required: false, hint: "Kare PNG önerilir (en az 64x64)." }
           - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
           - { label: "Alt Başlık (Tagline)", name: "tagline", widget: "string" }
           - { label: "Hero Banner Görseli", name: "heroImage", widget: "image" }
