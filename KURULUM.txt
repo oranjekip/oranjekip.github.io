@@ -1,0 +1,11 @@
+OranjeKip CMS gorsel kontrol paketi
+
+GitHub main dalinda images/ klasorune uc PNG dosyasini yukleyin. data/products.json dosyasini SADECE GitHub uzerindeki mevcut urun kayitlari bu ZIP ile ayniysa degistirin; aksi halde CMS uzerinden yapilan son fiyat/urun degisiklikleri kaybolabilir.
+
+Rijst Box: /images/grilled-chicken-pilaf-with-ayran.png
+Nuggets Box ve Kipvingers Box: /images/fernandes-green-punch-chicken-box.png
+Tenders Box: /images/crispy-chicken-box-with-red-bull.png
+
+Kontrol: https://oranjekip.nl/images/grilled-chicken-pilaf-with-ayran.png
+https://oranjekip.nl/images/fernandes-green-punch-chicken-box.png
+https://oranjekip.nl/images/crispy-chicken-box-with-red-bull.png
