@@ -60,7 +60,8 @@ collections:
           - { label: "Hero Başlık", name: "heroTitle", widget: "string" }
           - { label: "Alt Başlık (Tagline)", name: "tagline", widget: "string" }
           - { label: "Hero Banner Görseli", name: "heroImage", widget: "image" }
-          - { label: "Menu Görseli", name: "menuImage", widget: "image" }
+          - { label: "Volledige Menukaart Flyer (sol, tiklayinca buyur)", name: "menuImage", widget: "image", hint: "Bu dosya hem kucuk onizlemede hem tam ekran buyutmede kullanilir. PNG, JPG veya WebP." }
+          - { label: "Menu Boxes Flyer (sag, tiklayinca buyur)", name: "menuBoxesImage", widget: "image", required: false, hint: "PNG, JPG veya WebP. Bos birakilirsa mevcut Menu Boxes gorseli kullanilir." }
           - { label: "Menu PDF", name: "menuPdf", widget: "file" }
           - { label: "Hakkımızda Başlık", name: "aboutTitle", widget: "string" }
           - { label: "Hakkımızda Metni", name: "aboutText", widget: "text" }
