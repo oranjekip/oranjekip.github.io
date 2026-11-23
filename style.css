@@ -963,3 +963,12 @@ section h2 {
   .site-header .language-switcher button { padding: 7px 5px; font-size: 10px; }
   .site-header .nav-toggle { padding: 8px 6px; font-size: 11px; }
 }
+
+/* Keep the complete circular vehicle-wrap artwork visible on all screens. */
+#bestellen .service-image, #evenementen .service-image {
+  object-fit: contain; aspect-ratio: auto; max-height: 440px;
+  background: #fff;
+}
+@media (max-width: 720px) {
+  #bestellen .service-image, #evenementen .service-image { max-height: 340px; }
+}
