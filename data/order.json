@@ -5,6 +5,6 @@
   "instructions": "Zo werkt het: Bekijk ons menu, stuur je bestelling met de gewenste afhaaldatum, afhaaltijd en locatie, en wacht op onze bevestiging.",
   "note": "Alleen afhalen bij onze foodtruck. Geen bezorging of online betaling. Je bestelling is pas definitief na onze bevestiging.",
   "buttonLabel": "Bestel via WhatsApp",
-  "image": "/images/whatsapp.svg.png",
+  "image": "",
   "whatsappMessage": "Hallo OranjeKip! Ik wil graag een bestelling plaatsen.\n\nBestelling (producten en aantallen):\nGewenste afhaaldatum:\nGewenste afhaaltijd:\nAfhaallocatie (foodtruck):\nNaam:\n\nGraag ontvang ik een bevestiging. Bedankt!"
 }
