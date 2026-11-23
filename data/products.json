@@ -7,6 +7,12 @@
       "active": true
     },
     {
+      "name": "Nuggets Box",
+      "image": "/images/gemini_generated_image_xehqxxxehqxxxehq.jpg",
+      "price": "€9,95",
+      "active": true
+    },
+    {
       "name": "Hotwings Box",
       "price": "€9,95",
       "image": "/images/gemini_generated_image_dbemhidbemhidbem.jpg",
