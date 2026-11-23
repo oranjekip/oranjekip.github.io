@@ -51,22 +51,24 @@
 
 <section id="bestellen" class="container service-section">
   <div class="service-card card">
+    <img id="order-service-image" class="service-image" alt="Bestellen en afhalen" hidden>
     <div class="service-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-    <div><h2>Bestellen & Afhalen via WhatsApp</h2>
-      <p>Bestel eenvoudig via WhatsApp en haal je versbereide kipgerechten op het door ons bevestigde tijdstip af bij onze foodtruck.</p>
-      <p><strong>Zo werkt het:</strong> Bekijk ons menu, stuur je bestelling met de gewenste afhaaldatum, afhaaltijd en locatie, en wacht op onze bevestiging.</p>
-      <p class="service-note">Alleen afhalen bij onze foodtruck. Geen bezorging of online betaling. Je bestelling is pas definitief na onze bevestiging.</p>
-      <a id="whatsapp-order" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Bestel via WhatsApp</a>
+    <div><h2 id="order-title">Bestellen & Afhalen via WhatsApp</h2>
+      <p id="order-description"></p>
+      <p id="order-instructions"></p>
+      <p id="order-note" class="service-note"></p>
+      <a id="whatsapp-order" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span id="order-button-label">Bestel via WhatsApp</span></a>
     </div>
   </div>
 </section>
 <section id="evenementen" class="container service-section">
   <div class="service-card card">
+    <img id="event-service-image" class="service-image" alt="Evenementen en privéfeesten" hidden>
     <div class="service-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
-    <div><h2>Evenementen & Privéfeesten</h2>
-      <p>Een verjaardag, bedrijfsfeest, buurtfeest, festival of ander evenement organiseren? OranjeKip verzorgt heerlijke, versbereide kipgerechten vanuit onze foodtruck op locatie.</p>
-      <p>Vertel ons de datum, locatie, het soort evenement en het verwachte aantal gasten. We bespreken graag de mogelijkheden en maken een vrijblijvende offerte.</p>
-      <a id="whatsapp-event" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Vraag een offerte aan</a>
+    <div><h2 id="event-title">Evenementen & Privéfeesten</h2>
+      <p id="event-description"></p>
+      <p id="event-details"></p>
+      <a id="whatsapp-event" class="service-button whatsapp-button" href="https://wa.me/31618219262" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span id="event-button-label">Vraag een offerte aan</span></a>
     </div>
   </div>
 </section>
@@ -166,7 +168,24 @@ function renderTestimonials(items) {
   });
 }
 
-function renderSite(site) {
+function renderService(data, prefix, sectionId) {
+  const section = document.getElementById(sectionId);
+  section.hidden = data.enabled === false;
+  for (const field of ["title", "description", "buttonLabel"]) {
+    const element = document.getElementById(prefix + "-" + (field === "buttonLabel" ? "button-label" : field));
+    if (element) element.textContent = data[field] || "";
+  }
+  const secondary = document.getElementById(prefix + (prefix === "order" ? "-instructions" : "-details"));
+  secondary.textContent = data[prefix === "order" ? "instructions" : "details"] || "";
+  if (prefix === "order") document.getElementById("order-note").textContent = data.note || "";
+  const img = document.getElementById(prefix + "-service-image");
+  if (data.image) { img.src = data.image; img.hidden = false; }
+  else { img.removeAttribute("src"); img.hidden = true; }
+}
+
+function renderSite(site, order, event) {
+  renderService(order, "order", "bestellen");
+  renderService(event, "event", "evenementen");
   document.getElementById("hero-title").textContent = site.heroTitle || "";
   document.getElementById("hero-tagline").textContent = site.tagline || "";
   document.getElementById("hero-image").src = site.heroImage || "";
@@ -180,8 +199,8 @@ function renderSite(site) {
   const phone = String(site.whatsappNumber || "+31 6 182 192 62");
   const digits = phone.replace(/\D/g, "");
   const waBase = "https://wa.me/" + digits;
-  const orderMessage = "Hallo OranjeKip! Ik wil graag een bestelling plaatsen.\n\nBestelling (producten en aantallen):\nGewenste afhaaldatum:\nGewenste afhaaltijd:\nAfhaallocatie (foodtruck):\nNaam:\n\nGraag ontvang ik een bevestiging. Bedankt!";
-  const eventMessage = "Hallo OranjeKip! Ik wil graag een vrijblijvende offerte aanvragen voor een evenement.\n\nSoort evenement:\nDatum:\nLocatie/adres:\nVerwacht aantal gasten:\nNaam:\nOverige wensen:\n\nAlvast bedankt!";
+  const orderMessage = order.whatsappMessage || "Hallo OranjeKip! Ik wil graag een bestelling plaatsen.";
+  const eventMessage = event.whatsappMessage || "Hallo OranjeKip! Ik wil graag een offerte aanvragen.";
   document.getElementById("whatsapp-order").href = waBase + "?text=" + encodeURIComponent(orderMessage);
   document.getElementById("whatsapp-event").href = waBase + "?text=" + encodeURIComponent(eventMessage);
   const contact = document.getElementById("whatsapp-contact");
@@ -213,16 +232,18 @@ function escapeAttr(value) { return escapeHtml(value); }
 async function initSite() {
   document.getElementById("year").textContent = new Date().getFullYear();
   try {
-    const [productsData, locationsData, testimonialsData, site] = await Promise.all([
+    const [productsData, locationsData, testimonialsData, site, order, event] = await Promise.all([
       loadJSON("products.json"),
       loadJSON("locations.json"),
       loadJSON("testimonials.json"),
-      loadJSON("site.json")
+      loadJSON("site.json"),
+      loadJSON("order.json"),
+      loadJSON("events.json")
     ]);
     renderProducts(productsData.items || productsData);
     renderLocations(locationsData.items || locationsData);
     renderTestimonials(testimonialsData.items || testimonialsData);
-    renderSite(site);
+    renderSite(site, order, event);
   } catch (error) {
     console.error(error);
     document.getElementById("product-grid").innerHTML =
