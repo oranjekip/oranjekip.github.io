@@ -75,9 +75,15 @@
 <section id="fullmenu" class="container fullmenu-section">
   <h2>Volledige Menukaart</h2>
   <div class="menu-content card">
-    <img id="menu-image" src="images/OranjeKip Menu.png" alt="OranjeKip Menu">
-    <div class="menu-boxes-flyer" aria-label="Menu Boxes flyer">
-      <img id="menu-boxes-image" src="/images/menu-boxes-flyer.webp?v=20261123-2" alt="OranjeKip Menu Boxes: Rijst Box, Nuggets Box, Hotwings Box, Tenders Box en Kipvingers Box" loading="eager" decoding="async" width="1536" height="1024">
+    <div class="menu-flyer-grid">
+      <button class="menu-flyer-trigger" type="button" data-flyer="images/OranjeKip Menu.png" data-title="Volledige Menukaart" aria-label="Volledige Menukaart büyüt">
+        <img id="menu-image" src="images/OranjeKip Menu.png" alt="Volledige Menukaart" loading="lazy">
+        <span>Bekijk volledige menukaart ⤢</span>
+      </button>
+      <button class="menu-flyer-trigger" type="button" data-flyer="images/menu-boxes-flyer.webp" data-title="Menu Boxes" aria-label="Menu Boxes flyer büyüt">
+        <img id="menu-boxes-image" src="images/menu-boxes-flyer.webp" alt="Menu Boxes flyer" loading="lazy">
+        <span>Bekijk Menu Boxes ⤢</span>
+      </button>
     </div>
     <a id="menu-pdf" href="docs/menu-oranjekip.pdf" target="_blank" class="download-btn">Menu downloaden / PDF openen</a>
   </div>
@@ -312,6 +318,28 @@ nav.querySelectorAll("a").forEach(link => {
 });
 
 initSite();
+</script>
+
+<dialog id="flyer-zoom-dialog" class="flyer-zoom-dialog" aria-label="Flyer vergroot weergeven">
+  <button type="button" class="flyer-zoom-close" aria-label="Sluiten">×</button>
+  <img id="flyer-zoom-image" alt="Vergrote flyer">
+</dialog>
+<script>
+(function () {
+  const dialog = document.getElementById('flyer-zoom-dialog');
+  const image = document.getElementById('flyer-zoom-image');
+  if (!dialog || !image || !dialog.showModal) return;
+  document.querySelectorAll('.menu-flyer-trigger').forEach(button => {
+    button.addEventListener('click', () => {
+      image.src = button.dataset.flyer;
+      image.alt = button.dataset.title;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('.flyer-zoom-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => { image.removeAttribute('src'); });
+})();
 </script>
 </body>
 </html>

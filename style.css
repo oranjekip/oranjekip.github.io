@@ -977,3 +977,20 @@ section h2 {
 .menu-content .menu-boxes-flyer { display:block !important; width:100%; max-width:950px; margin:16px auto 12px; text-align:center; }
 .menu-content .menu-boxes-flyer img { display:block !important; width:100% !important; max-width:none !important; height:auto !important; object-fit:contain; border-radius:12px; }
 @media (max-width:600px) { .menu-content .menu-boxes-flyer { margin:10px auto; } }
+
+/* Menu Boxes flyer: force centered layout independently of generic menu images */
+.fullmenu-section .menu-content { align-items:center !important; }
+.fullmenu-section .menu-content .menu-boxes-flyer { align-self:center !important; display:flex !important; justify-content:center !important; width:100% !important; max-width:900px !important; margin:20px auto 12px !important; }
+.fullmenu-section .menu-content .menu-boxes-flyer #menu-boxes-image { display:block !important; width:100% !important; max-width:900px !important; height:auto !important; margin:0 auto !important; }
+
+/* Volledige Menukaart: two flyers side by side, click to zoom */
+.fullmenu-section .menu-content .menu-flyer-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;width:100%;max-width:960px;margin:0 auto 20px;align-items:center;justify-items:center;}
+.fullmenu-section .menu-content .menu-flyer-trigger {appearance:none;border:0;background:transparent;cursor:zoom-in;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;min-width:0;padding:8px;color:#292929;font:inherit;font-weight:700;}
+.fullmenu-section .menu-content .menu-flyer-trigger img {display:block;width:auto !important;max-width:100% !important;height:auto !important;max-height:420px !important;object-fit:contain;margin:auto !important;box-shadow:0 5px 16px rgba(0,0,0,.12);}
+.fullmenu-section .menu-content .menu-flyer-trigger:hover img {filter:brightness(1.06);}
+.fullmenu-section .menu-content .menu-flyer-trigger:focus-visible {outline:3px solid #ff7b19;outline-offset:3px;border-radius:12px;}
+.flyer-zoom-dialog {padding:42px 16px 16px;border:0;border-radius:12px;max-width:96vw;max-height:96vh;background:#161616;box-shadow:0 16px 80px rgba(0,0,0,.5);overflow:auto;}
+.flyer-zoom-dialog::backdrop {background:rgba(0,0,0,.85);}
+.flyer-zoom-dialog img {display:block;max-width:calc(96vw - 32px);max-height:calc(96vh - 74px);width:auto;height:auto;object-fit:contain;margin:auto;}
+.flyer-zoom-close {position:absolute;top:4px;right:10px;border:0;background:transparent;color:#fff;font-size:36px;line-height:1;cursor:pointer;padding:0 8px;}
+@media(max-width:600px) {.fullmenu-section .menu-content .menu-flyer-grid {gap:10px;}.fullmenu-section .menu-content .menu-flyer-trigger {padding:2px;font-size:12px;}.fullmenu-section .menu-content .menu-flyer-trigger img {max-height:280px !important;}}
