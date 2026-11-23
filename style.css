@@ -972,3 +972,8 @@ section h2 {
 @media (max-width: 720px) {
   #bestellen .service-image, #evenementen .service-image { max-height: 340px; }
 }
+
+/* Dedicated layout for the horizontal Menu Boxes flyer */
+.menu-content .menu-boxes-flyer { display:block !important; width:100%; max-width:950px; margin:16px auto 12px; text-align:center; }
+.menu-content .menu-boxes-flyer img { display:block !important; width:100% !important; max-width:none !important; height:auto !important; object-fit:contain; border-radius:12px; }
+@media (max-width:600px) { .menu-content .menu-boxes-flyer { margin:10px auto; } }
