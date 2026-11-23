@@ -70,3 +70,28 @@ collections:
           - { label: "Önizleme Başlığı", name: "previewTitle", widget: "string" }
           - { label: "Önizleme Metni", name: "previewText", widget: "text" }
           - { label: "Önizleme Sipariş Uyarısı", name: "previewOrders", widget: "string" }
+
+      - name: "order"
+        label: "WhatsApp Sipariş & Afhalen"
+        file: "data/order.json"
+        fields:
+          - { label: "Bölüm Aktif mi?", name: "enabled", widget: "boolean" }
+          - { label: "Başlık", name: "title", widget: "string" }
+          - { label: "Açıklama", name: "description", widget: "text" }
+          - { label: "Sipariş ve Teslim Alma Talimatları", name: "instructions", widget: "text" }
+          - { label: "Teslimat ve Onay Uyarısı", name: "note", widget: "text" }
+          - { label: "Buton Metni", name: "buttonLabel", widget: "string" }
+          - { label: "Bölüm Görseli (İsteğe Bağlı)", name: "image", widget: "image", required: false }
+          - { label: "WhatsApp Hazır Sipariş Mesajı", name: "whatsappMessage", widget: "text" }
+
+      - name: "events"
+        label: "Evenementen & Privéfeesten"
+        file: "data/events.json"
+        fields:
+          - { label: "Bölüm Aktif mi?", name: "enabled", widget: "boolean" }
+          - { label: "Başlık", name: "title", widget: "string" }
+          - { label: "Açıklama", name: "description", widget: "text" }
+          - { label: "Etkinlik Detayları", name: "details", widget: "text" }
+          - { label: "Buton Metni", name: "buttonLabel", widget: "string" }
+          - { label: "Etkinlik Görseli (İsteğe Bağlı)", name: "image", widget: "image", required: false }
+          - { label: "WhatsApp Hazır Teklif Mesajı", name: "whatsappMessage", widget: "text" }
